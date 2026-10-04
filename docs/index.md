@@ -7,7 +7,7 @@ tags:
 <center>
 <font size= "6">Zice Sun Datasheet</font><br>
 as part of<br>
-<font size= "8"> Setting Up Git</font><br>
+<font size= "8"> GripRx</font><br>
 for<br>
 <font size= "5"> Team 103 </font><br>
 
