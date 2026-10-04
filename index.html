@@ -332,6 +332,26 @@
   
 
       
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="docs/" class="md-tabs__link">
+          
+  
+    
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -460,6 +480,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasheet-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datasheet Pages
+    </span>
+  </a>
   
 </li>
       
@@ -761,6 +790,56 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="docs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Docs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -818,6 +897,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#datasheet-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datasheet Pages
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -855,12 +943,13 @@ for<br>
 <p>This datasheet documents my individual contributions to the Team 103 
 design project for EGR 304, Fall 2026.</p>
 <h3 id="project-summary">Project Summary</h3>
-<p><em>The team has not yet finalized the project topic. This section will be 
-updated with the project direction and how my subsystem contributes.</em></p>
+<p>Team 103 is designing <strong>GripRx</strong>, a prescription-based automatic-resistance grip trainer for hand rehabilitation. The device measures the force a patient applies through a load cell and automatically sets its own mechanical resistance to the level prescribed by a therapist. The system is split into three boards, each built around a PIC18F57Q43 Curiosity Nano: a UI board, a force sensing board, and a motor board, connected in a daisy chain by 8-pin ribbon cables.</p>
 <h3 id="my-contribution">My Contribution</h3>
-<p><em>To be updated as design work progresses.</em>
-To review the details listed of the material used to construct the subsection, you can review it in the <a href="https://embedded-systems-design.github.io/EGR304DataSheetTemplate/03-BOM/BOM/">"BOM"</a> section of the datasheet.</p>
-<p>For all the sections</p>
+<p>I design the <strong>force sensing board</strong>, the center board of the daisy chain. It measures grip force (load cell, INA125P instrumentation amplifier and active low-pass filter into the ADC), runs the training-session logic, and exchanges messages with the UI board and the motor board.</p>
+<h2 id="datasheet-pages">Datasheet Pages</h2>
+<ul>
+<li><a href="01-Block-Diagram/Block-Diagram/">Block Diagram</a>: individual block diagram of the force sensing board</li>
+</ul>
 
 
 
@@ -900,13 +989,13 @@ To review the details listed of the material used to construct the subsection, y
         
         
           
-          <a href="01-Block-Diagram/Block-Diagram/" class="md-footer__link md-footer__link--next" aria-label="Next: Individal Block Diagram">
+          <a href="01-Block-Diagram/Block-Diagram/" class="md-footer__link md-footer__link--next" aria-label="Next: Block Diagram">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Individal Block Diagram
+                Block Diagram
               </div>
             </div>
             <div class="md-footer__button md-icon">
