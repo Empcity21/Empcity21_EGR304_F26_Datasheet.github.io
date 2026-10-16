@@ -30,3 +30,5 @@ I design the **force sensing board**, the center board of the daisy chain. It me
 ## Datasheet Pages
 
 - [Block Diagram](01-Block-Diagram/Block-Diagram.md): individual block diagram of the force sensing board
+- [Component Selection](02-Component-Selection/Component-Selection.md): candidate parts, choices and rationale for each major component, and the microcontroller pin table
+- [Power Budget](05-Power-Budget/Power-Budget.md): worst-case current budget for the +5 V rail, regulator and 9 V wall adapter
