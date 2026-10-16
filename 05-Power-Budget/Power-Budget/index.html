@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://empcity21.github.io/Empcity21_EGR304_F26_Datasheet.github.io/05-Power-Budget/Power-Budget/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../../04-Schematic/schematic/">
       
       
         <link rel="next" href="../../Appendix/">
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#power-budget-force-sensing-board" class="md-skip">
           Skip to content
         </a>
       
@@ -301,7 +301,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -327,26 +327,6 @@
     
   
   Appendix
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../docs/" class="md-tabs__link">
-          
-  
-    
-  
-  Docs
 
         </a>
       </li>
@@ -620,10 +600,6 @@
     
       
         
-          
-        
-      
-        
       
     
     
@@ -643,24 +619,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked="">
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
   
   <span class="md-ellipsis">
     05 Power Budget
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
@@ -668,8 +636,6 @@
             05 Power Budget
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
             
               
                 
@@ -683,6 +649,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -712,6 +680,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -729,6 +699,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Budget
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-each-section-was-filled-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Each Section Was Filled In
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conclusions" class="md-nav__link">
     <span class="md-ellipsis">
       Conclusions
@@ -738,9 +726,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resouces" class="md-nav__link">
+  <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Resouces
+      Resources
     </span>
   </a>
   
@@ -818,56 +806,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../docs/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Docs
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -884,6 +822,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -902,6 +842,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Budget
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-each-section-was-filled-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Each Section Was Filled In
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conclusions" class="md-nav__link">
     <span class="md-ellipsis">
       Conclusions
@@ -911,9 +869,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resouces" class="md-nav__link">
+  <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Resouces
+      Resources
     </span>
   </a>
   
@@ -942,20 +900,67 @@
   
 
 
-  <h1>Power Budget</h1>
-
+<h1 id="power-budget-force-sensing-board">Power Budget: Force Sensing Board</h1>
+<p><strong>Zice Sun</strong> · Team 103 · Project: <strong>GripRx</strong></p>
 <h2 id="overview">Overview</h2>
-<p>Write a overview of what you did and why you did a Power Budget.</p>
-<blockquote>
-<p>Capture your power budge as a image to display. Take time to get clean breaks and a well organized layout.</p>
-</blockquote>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../budgetPg1.png" data-desc-position="bottom"><img alt="budget1" height:_300_="height:&quot;300;&quot;" src="../budgetPg1.png" style="style" width:_350_="width:&quot;350&quot;"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../budgetPg2.png" data-desc-position="bottom"><img alt="budget2" height:_300_="height:&quot;300;&quot;" src="../budgetPg2.png" style="style" width:_350_="width:&quot;350&quot;"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../budgetPg3.png" data-desc-position="bottom"><img alt="budget3" height:_300_="height:&quot;300;&quot;" src="../budgetPg3.png" style="style" width:_350_="width:&quot;350&quot;"></a></p>
+<p>The power budget checks that the voltage regulator and the external power source I selected on the <a href="../../02-Component-Selection/Component-Selection/">Component Selection</a> page can power every part of the force sensing board at the same time, even in the worst case. It uses the class template and lists each major component's <strong>absolute maximum</strong> current from its datasheet, so the result is a safe upper bound rather than a typical value. The force sensing board has its own wall adapter and regulator, so it gets its own power budget, separate from my teammates' boards.</p>
+<p>The design follows the walkthrough's advice to keep the number of power rails as small as possible: every part on this board runs from a <strong>single +5 V rail</strong>. The op amps and the instrumentation amplifier are single-supply parts, so no negative rail is needed, and nothing needs +12 V or +3.3 V. The unused rails in the template are marked "not used".</p>
+<h2 id="power-budget">Power Budget</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../power-budget-p1.png" data-desc-position="bottom"><img alt="Power budget page 1: header, Section A list of major components, and the unused +12 V rail" src="../power-budget-p1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../power-budget-p2.png" data-desc-position="bottom"><img alt="Power budget page 2: +5 V power rail with the L7805ABV-DG regulator, and the unused -5 V and +3.3 V rails" src="../power-budget-p2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../power-budget-p3.png" data-desc-position="bottom"><img alt="Power budget page 3: Sections C to E, external power source, battery life and notes" src="../power-budget-p3.png"></a></p>
+<p><em>Figure 1: Power budget for the force sensing board, filled in on the class template.</em></p>
+<h2 id="how-each-section-was-filled-in">How Each Section Was Filled In</h2>
+<p><strong>A. Major components.</strong> Four components draw power from the board; the regulator and power source are not listed here, as the template instructs. Each current is the absolute maximum from the datasheet:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Part number</th>
+<th>Supply range</th>
+<th>Absolute maximum current</th>
+<th>Datasheet basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PIC18F57Q43 Curiosity Nano</td>
+<td>DM164150</td>
+<td>1.8 – 5.5 V</td>
+<td>350 mA</td>
+<td>Maximum current on the VDD pin, 40/44/48-pin devices, −40 °C to +85 °C</td>
+</tr>
+<tr>
+<td>Instrumentation amplifier</td>
+<td>INA125P</td>
+<td>2.7 – 36 V</td>
+<td>12.5 mA</td>
+<td>0.525 mA maximum quiescent current plus 12 mA output short-circuit current</td>
+</tr>
+<tr>
+<td>Quad op amp</td>
+<td>MCP6004-I/P</td>
+<td>1.8 – 6.0 V</td>
+<td>30 mA</td>
+<td>Maximum current at the supply pins</td>
+</tr>
+<tr>
+<td>Load cell excitation</td>
+<td>Phidgets 3135_0</td>
+<td>5 V maximum</td>
+<td>5 mA</td>
+<td>5 V across the 1 kΩ bridge</td>
+</tr>
+</tbody>
+</table>
+<p><strong>B. Power rails.</strong> All four components are on the +5 V rail. Their total is 397.5 mA; with the 25 % safety margin (which also covers the passive parts, the debug LED and other small loads) the rail must supply <strong>496.9 mA</strong>.</p>
+<p><strong>C. Regulator.</strong> The STMicroelectronics L7805ABV-DG can supply 1500 mA, leaving <strong>1003.1 mA</strong> of spare current on the +5 V rail. At the worst-case load it would dissipate (9 V − 5 V) × 0.497 A ≈ 2.0 W, so it gets a Boyd 507302B00000G TO-220 heatsink; the expected normal draw is under 100 mA (about 0.4 W). The regulator comparison (L7805ABV-DG, LM2940CT-5.0, MCP1702) is in Table 4 of the Component Selection page.</p>
+<p><strong>D. External power source.</strong> The class-issued BestCH 9 V 3 A wall adapter feeds the only regulator. Counting the regulator at its full 1500 mA rating, <strong>1500 mA</strong> remains, so the adapter can supply the board in every case. A 9 V input gives the L7805ABV-DG its required 2 V of dropout headroom (7 V minimum input). The adapter comparison is in Table 5 of the Component Selection page.</p>
+<p><strong>E. Battery life.</strong> Not applicable: the board is powered from the wall and has no battery.</p>
 <h2 id="conclusions">Conclusions</h2>
-<p>From the prepare Power Budget, .....</p>
-<h2 id="resouces">Resouces</h2>
-<p>The power budget as a PDF download is available <a href="../PowerBudgetExample.pdf"><em>here</em></a>, and a Microsoft Excel Sheet <a href="../PowerBudgetExample.xlsx"><em>here</em></a>.</p>
+<p>The force sensing board needs only one regulated +5 V rail. In the worst case it needs 496.9 mA including the 25 % safety margin; the L7805ABV-DG regulator (1500 mA) and the 9 V 3 A adapter (3000 mA) both have positive remaining current, so the selected regulator and power source are sufficient. The main design consequence is heat: the regulator must have a heatsink so that it stays safe even at the worst-case current.</p>
+<h2 id="resources">Resources</h2>
+<p>The power budget is available as a <a href="../PowerBudget_ZiceSun.pdf">PDF</a> and as a <a href="../PowerBudget_ZiceSun.xlsx">Microsoft Excel workbook</a>.</p>
 
 
 
@@ -994,7 +999,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Power Budget">
+          <a href="../../04-Schematic/schematic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Schematic">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
@@ -1004,7 +1009,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Power Budget
+                Schematic
               </div>
             </div>
           </a>
