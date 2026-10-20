@@ -649,9 +649,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resouces" class="md-nav__link">
+  <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Resouces
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-of-generative-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use of Generative AI
     </span>
   </a>
   
@@ -809,9 +818,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resouces" class="md-nav__link">
+  <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Resouces
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-of-generative-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use of Generative AI
     </span>
   </a>
   
@@ -843,11 +861,36 @@
   <h1>Schematic</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This schematic is design to support .... (highlight functionally, power, and controller).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../Screenshot.png" data-desc-position="bottom"><img alt="schematic" height:_300_="height:&quot;300;&quot;" src="../Screenshot.png" style="style" width:_350_="width:&quot;350&quot;"></a>
-<strong>Figure ##:</strong> Showing a example schematic.</p>
-<h2 id="resouces">Resouces</h2>
-<p>The schematic as a PDF download is available <a href="../ExampleSchematic.pdf"><em>here</em></a>, and the Zip folder of the project <a href="../dummyZip.zip"><em>here</em></a>.</p>
+<p>This schematic shows the GripRx force sensing board. Sheet 1 contains the 9 V input with a 1 A fuse, reverse-polarity diode and L7805 5 V regulator, the PIC18F57Q43 Curiosity Nano with isolation jumpers, the ribbon connectors to the UI board (J1) and motor board (J2), a spare GPIO header and test points. Sheet 2 contains the load cell amplifier: an INA125P instrumentation amplifier (gain ≈ 748) with a buffered 0.5 V reference, a 9.8 Hz Sallen-Key low-pass filter into ADC RA0, a buffered DAC output to the motor board, and the debug button and LED.</p>
+<p><strong>Note:</strong> GitHub is currently having issues displaying images. If the schematic images below do not display, please download the <a href="../Zice_Schematic.pdf">schematic PDF</a>. The schematic PDF is also submitted directly to Canvas.</p>
+<p></p>
+<p><strong>Figure 1.</strong> Sheet 1: power, microcontroller, connectors and test points.</p>
+<p></p>
+<p><strong>Figure 2.</strong> Sheet 2: load cell signal chain and debug.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="../Zice_Schematic.pdf">Schematic (PDF)</a></li>
+<li><a href="../Zice_Schematic.zip">KiCad project (ZIP)</a></li>
+</ul>
+<h2 id="use-of-generative-ai">Use of Generative AI</h2>
+<p>I used Claude (Anthropic) for this assignment. Claude produced a reference schematic drawing and parts list, fxied the U4A input polarity, a label typo and six missing connections. I did the rest of the wiring, the layout and the section labels myself. Full queries:</p>
+<ol>
+<li>
+<p>"I am doing EGR 304 individual assignment schematics, give me the full overview and what to do [assignment link]."</p>
+</li>
+<li>
+<p>"What parts do I need to draw? How do I draw them?"</p>
+</li>
+<li>
+<p>"Generate a sample look of the schematics."</p>
+</li>
+<li>
+<p>"How to draw dashed blocks?"</p>
+</li>
+<li>
+<p>"ERC is good, check my schematics before turning in."</p>
+</li>
+</ol>
 
 
 
