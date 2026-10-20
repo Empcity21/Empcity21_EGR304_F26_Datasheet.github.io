@@ -29,8 +29,20 @@ I used Claude (Anthropic) for this assignment. Claude produced a reference schem
 
 2. "What parts do I need to draw? How do I draw them?"
 
-3. "Generate a sample look of the schematics."
+3. "Should I use Earth or GND?"
 
-4. "How to draw dashed blocks?"
+4. "Generate a sample look of the schematics."
 
-5. "ERC is good, check my schematics before turning in."
+6. "How to draw dashed blocks?"
+
+7. "Check my previous projects: are there any other circuits/parts I can reuse?"
+
+8. "About the PIC Design (and other circuits) you said I could copy and reuse, which part exactly and how do I reuse?"
+
+9. "What do I need to submit?"
+
+10. "ERC is good, check my schematics before turning in."
+
+11. "How do I export PNG?"
+
+12. "What do I do again when images don't display? [schematic page link]"
