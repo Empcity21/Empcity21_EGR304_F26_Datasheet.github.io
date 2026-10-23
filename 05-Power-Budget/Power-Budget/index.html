@@ -906,9 +906,9 @@
 <p>The power budget checks that the voltage regulator and the external power source I selected on the <a href="../../02-Component-Selection/Component-Selection/">Component Selection</a> page can power every part of the force sensing board at the same time, even in the worst case. It uses the class template and lists each major component's <strong>absolute maximum</strong> current from its datasheet, so the result is a safe upper bound rather than a typical value. The force sensing board has its own wall adapter and regulator, so it gets its own power budget, separate from my teammates' boards.</p>
 <p>The design follows the walkthrough's advice to keep the number of power rails as small as possible: every part on this board runs from a <strong>single +5 V rail</strong>. The op amps and the instrumentation amplifier are single-supply parts, so no negative rail is needed, and nothing needs +12 V or +3.3 V. The unused rails in the template are marked "not used".</p>
 <h2 id="power-budget">Power Budget</h2>
-<p></p>
-<p></p>
-<p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../power-budget-p1.png" data-desc-position="bottom"><img alt="Power budget page 1: header, Section A list of major components, and the unused +12 V rail" src="../power-budget-p1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../power-budget-p2.png" data-desc-position="bottom"><img alt="Power budget page 2: +5 V power rail with the L7805ABV-DG regulator, and the unused -5 V and +3.3 V rails" src="../power-budget-p2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../power-budget-p3.png" data-desc-position="bottom"><img alt="Power budget page 3: Sections C to E, external power source, battery life and notes" src="../power-budget-p3.png"></a></p>
 <p><em>Figure 1: Power budget for the force sensing board, filled in on the class template.</em></p>
 <h2 id="how-each-section-was-filled-in">How Each Section Was Filled In</h2>
 <p><strong>A. Major components.</strong> Four components draw power from the board; the regulator and power source are not listed here, as the template instructs. Each current is the absolute maximum from the datasheet:</p>
