@@ -8,7 +8,7 @@ title: Component Selection
 
 ## Overview
 
-This page compares at least three candidate solutions for every major component of my subsystem, the **force sensing board**, and explains which one I chose and why. The components follow the blocks of my [individual block diagram](../01-Block-Diagram/Block-Diagram.md): the load cell, the instrumentation amplifier, the op amp for the active low-pass filter, the 5 V voltage regulator and the 9 V external power source. The microcontroller (PIC18F57Q43 Curiosity Nano) is not compared because it was selected for the class.
+This page compares at least three candidate solutions for every major component of my subsystem, the **force sensing board**, and explains which one I chose and why. The components follow the blocks of my [individual block diagram](../01-Block-Diagram/Block-Diagram.md): the load cell, the instrumentation amplifier, the op amp originally planned for an active low-pass filter (removed after instructor review; see Section 3), the 5 V voltage regulator and the 9 V external power source. The microcontroller (PIC18F57Q43 Curiosity Nano) is not compared because it was selected for the class.
 
 All five components belong to my individual subsystem and are labeled in bold as **[Individual subsystem: force sensing board]**. The board has no actuator or other electro-mechanical part of its own; the motor and lead screw are on Gabriel's motor board.
 
@@ -17,7 +17,7 @@ The selections were judged against these project specifications and course const
 - Measure grip force from 0 to 40 kgf with 0.1 kgf resolution on the PIC's 12-bit ADC (0 to 5 V).
 - Run every part from one regulated +5 V rail, fed by a 9 V wall adapter through a through-hole linear regulator.
 - Use bare components only (no breakout or daughter boards) in packages the Peralta mill can make (pin pitch ≥ 0.8 mm), so DIP, SOIC, TO-92 and TO-220 are acceptable but MSOP and QFN are not.
-- Include an op amp stage in the sensor signal chain; any other amplifier needs instructor approval.
+- Include an amplifier stage in the sensor signal chain. The instructor approved the INA125P instrumentation amplifier as that stage and advised against extra op-amp buffers and filters.
 - Stay within the <span>&#36;</span>60 individual budget; parts handed out in class do not count against it.
 
 Prices are for quantity 1, checked on 2026-10-16 at the linked vendor unless noted.
@@ -38,7 +38,7 @@ Prices are for quantity 1, checked on 2026-10-16 at the linked vendor unless not
 
 **Choice:** Option 1: Phidgets 3135_0 50 kg straight-bar load cell.
 
-**Rationale:** GripRx sets the motor resistance from the measured grip force, so the force reading must be accurate and repeatable across the whole 0–40 kgf range. Only the two strain-gauge cells can measure that range; the force sensitive resistor saturates at a few kilograms and is too nonlinear for a therapy prescription. Between the two load cells, the Phidgets cell is a complete full bridge, which cancels temperature effects and wires directly to the INA125P with no completion resistors, and its straight-bar shape bolts into the handle. At 5 V excitation it gives 0.1 mV per kgf, so 40 kgf produces 4 mV; with a total gain of about 750 this becomes about 3 V at the ADC, and 0.1 kgf is about 6 ADC counts, which meets the resolution goal. The separate Phidgets order is the main drawback; if the shipping pushes me over budget I will buy the cell out of pocket, which the course allows.
+**Rationale:** GripRx sets the motor resistance from the measured grip force, so the force reading must be accurate and repeatable across the whole 0–40 kgf range. Only the two strain-gauge cells can measure that range; the force sensitive resistor saturates at a few kilograms and is too nonlinear for a therapy prescription. Between the two load cells, the Phidgets cell is a complete full bridge, which cancels temperature effects and wires directly to the INA125P with no completion resistors, and its straight-bar shape bolts into the handle. At 5 V excitation it gives 0.1 mV per kgf, so 40 kgf produces 4 mV; with the INA125P gain of 604 this becomes about 2.4 V above the 1.24 V reference (3.7 V at the ADC), and 0.1 kgf is about 5 ADC counts, which meets the resolution goal. The separate Phidgets order is the main drawback; if the shipping pushes me over budget I will buy the cell out of pocket, which the course allows.
 
 ### 2. Instrumentation Amplifier
 
@@ -48,15 +48,15 @@ Prices are for quantity 1, checked on 2026-10-16 at the linked vendor unless not
 
 | **Solution** | **Pros** | **Cons** |
 | --- | --- | --- |
-| ![Texas Instruments INA125P in DIP-16](inamp-ti-ina125p.jpg){ width="170" }<br>**Option 1.**<br>Texas Instruments INA125P instrumentation amplifier (DIP-16)<br><span>&#36;</span>12.78/each (Mouser)<br>[TI INA125P at Mouser](https://www.mouser.com/en/ProductDetail/Texas-Instruments/INA125P?qs=VBduBm9rCJSDMcs2CyEvAw%3D%3D) | \* Designed for bridge sensors: high CMRR (100 dB minimum at G = 100 to 500) rejects the 2.5 V common-mode level of the bridge<br>\* Gain set by one resistor, G = 4 + 60 kΩ/RG, from 4 to 10,000<br>\* Low offset (250 µV maximum) and low quiescent current (525 µA maximum)<br>\* Runs from a single 2.7 V to 36 V supply, so it works on the 5 V rail<br>\* DIP package plugs straight into a breadboard for prototyping | \* Most expensive of the three options<br>\* On a single 5 V supply the output only swings from about 1 V to 3.3 V (worst case), so the REF pin must be offset and part of the gain is moved into the filter stage<br>\* Not an op amp, so it needs instructor approval |
+| ![Texas Instruments INA125P in DIP-16](inamp-ti-ina125p.jpg){ width="170" }<br>**Option 1.**<br>Texas Instruments INA125P instrumentation amplifier (DIP-16)<br><span>&#36;</span>12.78/each (Mouser)<br>[TI INA125P at Mouser](https://www.mouser.com/en/ProductDetail/Texas-Instruments/INA125P?qs=VBduBm9rCJSDMcs2CyEvAw%3D%3D) | \* Designed for bridge sensors: high CMRR (100 dB minimum at G = 100 to 500) rejects the 2.5 V common-mode level of the bridge<br>\* Gain set by one resistor, G = 4 + 60 kΩ/RG, from 4 to 10,000<br>\* Low offset (250 µV maximum) and low quiescent current (525 µA maximum)<br>\* Runs from a single 2.7 V to 36 V supply, so it works on the 5 V rail<br>\* DIP package plugs straight into a breadboard for prototyping | \* Most expensive of the three options<br>\* On a single 5 V supply the output only swings from about 1 V to 3.3 V (worst case), so the reference pin must be offset (solved with its internal 1.24 V reference)<br>\* Not an op amp, so it needs instructor approval |
 | ![Microchip MCP6N11 in SOIC-8](inamp-microchip-mcp6n11.jpg){ width="170" }<br>**Option 2.**<br>Microchip MCP6N11-100E/SN instrumentation amplifier (SOIC-8)<br><span>&#36;</span>1.77/each (Mouser)<br>[Microchip MCP6N11-100E/SN at Mouser](https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP6N11-100E-SN?qs=YyMeZBPsWN6ib594iL%252B2ug%3D%3D) | \* Rail-to-rail input and output on a single 1.8 V to 5.5 V supply, so the whole 0–5 V ADC range is usable<br>\* Inexpensive and in the SOIC-8 package the mill can make<br>\* The "-100" version is stable at high gain, which suits the gain of about 750 this board needs<br>\* Gain set by two resistors | \* Higher input offset than the INA125P, which must be removed by taring<br>\* 5.5 V maximum supply leaves little margin above the 5 V rail<br>\* SOIC needs an adapter board for breadboard testing<br>\* Only 5 in stock at Mouser today (more expected 10/19); also needs instructor approval |
 | ![Microchip MCP6V27 in SOIC-8](inamp-microchip-mcp6v27.jpg){ width="170" }<br>**Option 3 (custom).**<br>Three-op-amp instrumentation amplifier built from 2× Microchip MCP6V27-E/SN zero-drift dual op amps and 0.1 % resistors<br><span>&#36;</span>3.20/each, <span>&#36;</span>6.40 for two (Mouser)<br>[Microchip MCP6V27-E/SN at Mouser](https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP6V27-E-SN?qs=36WIQGTfLarwvjZsufRd4A%3D%3D) | \* Built only from op amps, so it satisfies the "op amp stage" rule without special approval<br>\* Zero-drift op amps have about ±2 µV offset, far below the 10 µV per 0.1 kgf signal step<br>\* Rail-to-rail input and output on the 5 V rail<br>\* The fourth op amp is free to buffer the reference voltage | \* CMRR depends on resistor matching: about 7 precision resistors must be matched to 0.1 %<br>\* More parts, more board area and more layout and soldering work<br>\* Two SOIC-8 packages need adapters for breadboard testing |
 
-**Choice:** Option 1: Texas Instruments INA125P (pending instructor approval; Option 3 is the fallback).
+**Choice:** Option 1: Texas Instruments INA125P (approved by the instructor).
 
-**Rationale:** The load cell signal is only 4 mV at 40 kgf riding on a 2.5 V common-mode voltage, so the first stage must reject common-mode voltage very well while adding almost no offset. The INA125P is a single, proven bridge amplifier: one resistor sets the gain (RG ≈ 80 Ω gives about 750), its CMRR is guaranteed, and it comes in a DIP package so I can prove the whole chain on a breadboard before the PCB is milled. Its limited output swing on a 5 V supply is handled by biasing the REF pin with a buffered voltage from the MCP6004 and taking part of the gain in the filter stage. The MCP6N11 is the lowest-cost option, but its offset is higher and its stock is low. If the INA125P is not approved, I will build Option 3, which needs no approval because it is made only of op amps, at the cost of more parts and resistor matching.
+**Rationale:** The load cell signal is only 4 mV at 40 kgf riding on a 2.5 V common-mode voltage, so the first stage must reject common-mode voltage very well while adding almost no offset. The INA125P is a single, proven bridge amplifier: one resistor sets the gain (G = 4 + 60 kΩ / RG, so RG = 100 Ω gives 604), its CMRR is guaranteed, and it comes in a DIP package so I can prove the whole chain on a breadboard before the PCB is milled. Its limited output swing on a 5 V supply is handled by its own internal 1.24 V reference: VREFOUT is set to 1.24 V and drives the IAREF pin directly, so zero force reads 1.24 V and 40 kgf reads about 3.7 V, inside the output swing, with no external op amp. The MCP6N11 is the lowest-cost option, but its offset is higher and its stock is low. Option 3 would need about seven matched precision resistors and three op amps; the instructor approved the INA125P and advised using it as the only amplifier.
 
-### 3. Op Amp for the Active Low-Pass Filter
+### 3. Op Amp for the Active Low-Pass Filter (removed after instructor review)
 
 *Table 3: Low-pass filter op amp selection*
 
@@ -68,9 +68,15 @@ Prices are for quantity 1, checked on 2026-10-16 at the linked vendor unless not
 | ![Microchip MCP6002 in DIP-8](opamp-microchip-mcp6002.jpg){ width="170" }<br>**Option 2.**<br>Microchip MCP6002-I/P dual op amp (DIP-8)<br><span>&#36;</span>0.45/each (Mouser)<br>[Microchip MCP6002-I/P at Mouser](https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP6002-I-P?qs=Ux5rHyN1IXStLRM979v6Rg%3D%3D) | \* Same rail-to-rail, 1 MHz family as the MCP6004, so the filter design is identical<br>\* Smaller DIP-8 footprint<br>\* Inexpensive and widely stocked | \* Only two op amps: the filter and REF buffer use both, leaving no spare<br>\* Must be purchased, while the MCP6004 is already in hand |
 | ![Texas Instruments TLV9062 in SOIC-8](opamp-ti-tlv9062.jpg){ width="170" }<br>**Option 3.**<br>Texas Instruments TLV9062IDR dual op amp (SOIC-8)<br><span>&#36;</span>1.05/each (Mouser)<br>[TI TLV9062IDR at Mouser](https://www.mouser.com/en/ProductDetail/Texas-Instruments/TLV9062IDR?qs=u4fy%2FsgLU9PUtszsvUsi6w%3D%3D) | \* Lower offset (±0.3 mV typical) and 10 MHz gain-bandwidth<br>\* Rail-to-rail input and output on 1.8 V to 5.5 V<br>\* SOIC-8 is compact and millable | \* Surface-mount only, so it needs an adapter for breadboard testing<br>\* 5.5 V maximum supply leaves little margin above 5 V<br>\* Extra precision and speed are not needed for a 10 Hz filter after a high-gain stage |
 
-**Choice:** Option 1: Microchip MCP6004-I/P.
+**Choice:** None. The MCP6004-I/P (Option 1) was the original choice, but it is no longer used on the board.
 
-**Rationale:** The filter sits after the instrumentation amplifier, so the op amp's offset and noise are divided by the front-end gain of about 750 and no longer matter; what matters is rail-to-rail output into the ADC, enough op amps for the filter and the REF buffer, and an easy package. The MCP6004 meets all three, is already in my kit (so it costs nothing), and its four op amps cover the second-order Sallen-Key low-pass filter (cutoff about 10 Hz, well above the few hertz of a human grip and low enough to remove 60 Hz pickup), the REF buffer for the INA125P, and one spare. It also provides the op amp stage the course requires in the sensor signal chain.
+**Rationale:** The comparison above was made for a second-order Sallen-Key filter, a buffer for the INA125P reference and a buffer for the DAC output. After reviewing the schematic, the instructor advised that these op-amp stages make the circuit more complicated than this course needs. The board now uses:
+
+- **No reference buffer:** the INA125P's internal 1.24 V reference drives its IAREF pin directly (Section 2).
+- **A passive RC low-pass filter** instead of the Sallen-Key filter: 15 kΩ and 1 µF give a cutoff of 1 / (2π × 15 kΩ × 1 µF) ≈ 10.6 Hz. That is still well above the few hertz of a human grip, and it attenuates 60 Hz mains pickup by about 15 dB; averaging the ADC readings over one mains period in firmware removes the rest. The 1 µF capacitor also acts as a charge reservoir for the ADC's sample capacitor, so the 15 kΩ source resistance does not disturb the conversion.
+- **No DAC buffer:** FORCE_ANA goes from DAC1 (RA2) straight to the ribbon cable, because the motor board's ADC input draws no DC current.
+
+Removing the MCP6004 also removes 30 mA from the worst-case power budget and one IC from the PCB.
 
 ### 4. 5 V Voltage Regulator
 
@@ -112,7 +118,7 @@ Prices are for quantity 1, checked on 2026-10-16 at the linked vendor unless not
 | --- | --- | --- | --- | --- |
 | Load cell | Phidgets 3135_0 | <span>&#36;</span>7.00 | 2 (1 spare) | Phidgets |
 | Instrumentation amplifier | TI INA125P | <span>&#36;</span>12.78 | 2 (1 spare) | Digi-Key / Mouser |
-| Low-pass filter op amp | Microchip MCP6004-I/P | <span>&#36;</span>0 | 1 | Class kit |
+| Low-pass filter | Passive RC: 15 kΩ 1 % resistor, 1 µF X7R capacitor | under <span>&#36;</span>1 | 1 set | Digi-Key / lab stock |
 | 5 V regulator | ST L7805ABV-DG (+ Boyd 507302B00000G heatsink, <span>&#36;</span>0.34) | <span>&#36;</span>0 | 1 | Class kit |
 | 9 V power source | BestCH 9 V 3 A adapter | <span>&#36;</span>0 | 1 | Issued in class |
 
@@ -124,8 +130,8 @@ The major components above cost <span>&#36;</span>39.56 of my <span>&#36;</span>
 
 | Function | Module | Type | Pin | Direction | Connects to |
 | --- | --- | --- | --- | --- | --- |
-| Filtered force voltage | ADC (ADCC) | Analog in | RA0 | In | MCP6004 low-pass filter output |
-| FORCE_ANA (analog copy of force) | DAC1 | Analog out | RA2 | Out | J2 pin 6 → motor board |
+| Filtered force voltage | ADC (ADCC) | Analog in | RA0 | In | RC low-pass filter output (R5, C8) |
+| FORCE_ANA (analog copy of force) | DAC1 | Analog out | RA2 | Out | J2 pin 6 → motor board (unbuffered) |
 | UART F→M | UART3 TX | Digital | RA3 | Out | J2 pin 1 → motor board |
 | UART M→F | UART3 RX | Digital | RA4 | In | J2 pin 2 ← motor board |
 | UART F→U | UART1 TX | Digital | RC2 | Out | J1 pin 1 → UI board |
