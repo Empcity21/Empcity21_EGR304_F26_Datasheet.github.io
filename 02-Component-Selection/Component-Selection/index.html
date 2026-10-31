@@ -632,6 +632,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mcc-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCC Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#use-of-generative-ai" class="md-nav__link">
     <span class="md-ellipsis">
       Use of Generative AI
@@ -964,6 +973,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mcc-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCC Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#use-of-generative-ai" class="md-nav__link">
     <span class="md-ellipsis">
       Use of Generative AI
@@ -1023,24 +1041,24 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="Phidgets 3135_0 straight-bar load cell" src="loadcell-phidgets-3135.jpg" width="170" /><br><strong>Option 1.</strong><br>Phidgets 3135_0 (CZL635-50) 50 kg straight-bar load cell<br><span>&#36;</span>7.00/each<br><a href="https://www.phidgets.com/?prodid=226">Phidgets 3135_0 product page</a></td>
+<td><img alt="Phidgets 3135_0 straight-bar load cell" src="../images/loadcell-phidgets-3135.jpg" width="170" /><br><strong>Option 1.</strong><br>Phidgets 3135_0 (CZL635-50) 50 kg straight-bar load cell<br><span>&#36;</span>7.00/each<br><a href="https://www.phidgets.com/?prodid=226">Phidgets 3135_0 product page</a></td>
 <td>* Full 4-wire Wheatstone bridge connects straight to the instrumentation amplifier inputs<br>* 50 kg capacity covers the 40 kgf maximum grip with 25 % headroom<br>* Rated output 1 mV/V and a published spec sheet (repeatability, creep, zero balance, 5 V maximum excitation)<br>* Aluminum bar with M5 threaded holes is easy to mount inside the grip handle<br>* Inexpensive, with 239 in stock</td>
 <td>* Small output: only 5 mV at full scale with 5 V excitation, so it needs a gain of about 750<br>* Sold by Phidgets, not Digi-Key, so it adds a second order and shipping charge<br>* Zero balance and temperature drift must be removed by taring in firmware</td>
 </tr>
 <tr>
-<td><img alt="SparkFun SEN-10245 50 kg load sensor" src="loadcell-sparkfun-sen10245.jpg" width="150" /><br><strong>Option 2.</strong><br>SparkFun SEN-10245 50 kg load sensor (bathroom-scale corner cell)<br><span>&#36;</span>6.25/each (Digi-Key, 2026-10-04)<br><a href="https://www.digikey.com/en/products/detail/sparkfun-electronics/SEN-10245/5843757">SparkFun SEN-10245 at Digi-Key</a></td>
+<td><img alt="SparkFun SEN-10245 50 kg load sensor" src="../images/loadcell-sparkfun-sen10245.jpg" width="150" /><br><strong>Option 2.</strong><br>SparkFun SEN-10245 50 kg load sensor (bathroom-scale corner cell)<br><span>&#36;</span>6.25/each (Digi-Key, 2026-10-04)<br><a href="https://www.digikey.com/en/products/detail/sparkfun-electronics/SEN-10245/5843757">SparkFun SEN-10245 at Digi-Key</a></td>
 <td>* Lowest unit price of the three options<br>* Available from Digi-Key, so it can share one order with the rest of the board<br>* Same 1 mV/V class of output as Option 1</td>
 <td>* Half bridge (3 wires): needs a second cell or two precision completion resistors to form a full bridge<br>* Completion resistors add temperature drift that a full bridge cancels<br>* Flat bathroom-scale shape is designed to sit under a platform and is hard to fit into a hand grip</td>
 </tr>
 <tr>
-<td><img alt="SparkFun SEN-09375 force sensitive resistor" src="fsr-sparkfun-sen09375.jpg" width="150" /><br><strong>Option 3.</strong><br>Interlink FSR 402 force sensitive resistor (SparkFun SEN-09375)<br><span>&#36;</span>10.95/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/SparkFun/SEN-09375?qs=WyAARYrbSnZXUsoG9B01Lw%3D%3D">SparkFun SEN-09375 at Mouser</a></td>
+<td><img alt="SparkFun SEN-09375 force sensitive resistor" src="../images/fsr-sparkfun-sen09375.jpg" width="150" /><br><strong>Option 3.</strong><br>Interlink FSR 402 force sensitive resistor (SparkFun SEN-09375)<br><span>&#36;</span>10.95/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/SparkFun/SEN-09375?qs=WyAARYrbSnZXUsoG9B01Lw%3D%3D">SparkFun SEN-09375 at Mouser</a></td>
 <td>* Very thin and light, can be glued onto the grip surface<br>* Large resistance change: a simple voltage divider and op amp buffer can read it without an instrumentation amplifier<br>* Responds to light touches, useful for detecting that the user is holding the grip</td>
 <td>* Saturates at a few kilograms, far below the 40 kgf grip range<br>* Strongly nonlinear, with drift and part-to-part variation of several percent, so it cannot meet the 0.1 kgf resolution goal<br>* Most expensive of the three for the worst measurement accuracy</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Choice:</strong> Option 1: Phidgets 3135_0 50 kg straight-bar load cell.</p>
-<p><strong>Rationale:</strong> GripRx sets the motor resistance from the measured grip force, so the force reading must be accurate and repeatable across the whole 0–40 kgf range. Only the two strain-gauge cells can measure that range; the force sensitive resistor saturates at a few kilograms and is too nonlinear for a therapy prescription. Between the two load cells, the Phidgets cell is a complete full bridge, which cancels temperature effects and wires directly to the INA125P with no completion resistors, and its straight-bar shape bolts into the handle. At 5 V excitation it gives 0.1 mV per kgf, so 40 kgf produces 4 mV; with the INA125P gain of 604 this becomes about 2.4 V above the 1.24 V reference (3.7 V at the ADC), and 0.1 kgf is about 5 ADC counts, which meets the resolution goal. The separate Phidgets order is the main drawback; if the shipping pushes me over budget I will buy the cell out of pocket, which the course allows.</p>
+<p><strong>Rationale:</strong> GripRx sets the motor resistance from the measured grip force, so the force reading must be accurate and repeatable across the whole 0–40 kgf range. Only the two strain-gauge cells can measure that range; the force sensitive resistor saturates at a few kilograms and is too nonlinear for a therapy prescription. Between the two load cells, the Phidgets cell is a complete full bridge, which cancels temperature effects and wires directly to the INA125P with no completion resistors, and its straight-bar shape bolts into the handle. At 5 V excitation it gives 0.1 mV per kgf, so 40 kgf produces 4 mV; with the INA125P gain of 604 this becomes about 2.4 V above the 1.24 V reference (3.7 V at the ADC), and 0.1 kgf is about 5 ADC counts, which meets the resolution goal. This choice meets <strong>SW-06</strong> (0–40 kgf measured within 5 % of reading), <strong>UX-02</strong> (0.1 kgf displayed resolution) and <strong>MF-03</strong> (a straight-bar cell is linear and repeatable, so it can be calibrated with known reference loads). The separate Phidgets order is the main drawback: its shipping, on top of the Digi-Key shipping and tariff, would push my order over the <span>&#36;</span>60 budget, so I am buying the two load cells out of pocket, which the course allows.</p>
 <h3 id="2-instrumentation-amplifier">2. Instrumentation Amplifier</h3>
 <p><em>Table 2: Instrumentation amplifier selection</em></p>
 <p><strong>Instrumentation amplifier — [Individual subsystem: force sensing board]</strong></p>
@@ -1054,24 +1072,24 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="Texas Instruments INA125P in DIP-16" src="inamp-ti-ina125p.jpg" width="170" /><br><strong>Option 1.</strong><br>Texas Instruments INA125P instrumentation amplifier (DIP-16)<br><span>&#36;</span>12.78/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Texas-Instruments/INA125P?qs=VBduBm9rCJSDMcs2CyEvAw%3D%3D">TI INA125P at Mouser</a></td>
+<td><img alt="Texas Instruments INA125P in DIP-16" src="../images/inamp-ti-ina125p.jpg" width="170" /><br><strong>Option 1.</strong><br>Texas Instruments INA125P instrumentation amplifier (DIP-16)<br><span>&#36;</span>12.78/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Texas-Instruments/INA125P?qs=VBduBm9rCJSDMcs2CyEvAw%3D%3D">TI INA125P at Mouser</a></td>
 <td>* Designed for bridge sensors: high CMRR (100 dB minimum at G = 100 to 500) rejects the 2.5 V common-mode level of the bridge<br>* Gain set by one resistor, G = 4 + 60 kΩ/RG, from 4 to 10,000<br>* Low offset (250 µV maximum) and low quiescent current (525 µA maximum)<br>* Runs from a single 2.7 V to 36 V supply, so it works on the 5 V rail<br>* DIP package plugs straight into a breadboard for prototyping</td>
 <td>* Most expensive of the three options<br>* On a single 5 V supply the output only swings from about 1 V to 3.3 V (worst case), so the reference pin must be offset (solved with its internal 1.24 V reference)<br>* Not an op amp, so it needs instructor approval</td>
 </tr>
 <tr>
-<td><img alt="Microchip MCP6N11 in SOIC-8" src="inamp-microchip-mcp6n11.jpg" width="170" /><br><strong>Option 2.</strong><br>Microchip MCP6N11-100E/SN instrumentation amplifier (SOIC-8)<br><span>&#36;</span>1.77/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP6N11-100E-SN?qs=YyMeZBPsWN6ib594iL%252B2ug%3D%3D">Microchip MCP6N11-100E/SN at Mouser</a></td>
+<td><img alt="Microchip MCP6N11 in SOIC-8" src="../images/inamp-microchip-mcp6n11.jpg" width="170" /><br><strong>Option 2.</strong><br>Microchip MCP6N11-100E/SN instrumentation amplifier (SOIC-8)<br><span>&#36;</span>1.77/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP6N11-100E-SN?qs=YyMeZBPsWN6ib594iL%252B2ug%3D%3D">Microchip MCP6N11-100E/SN at Mouser</a></td>
 <td>* Rail-to-rail input and output on a single 1.8 V to 5.5 V supply, so the whole 0–5 V ADC range is usable<br>* Inexpensive and in the SOIC-8 package the mill can make<br>* The "-100" version is stable at high gain, which suits the gain of about 750 this board needs<br>* Gain set by two resistors</td>
 <td>* Higher input offset than the INA125P, which must be removed by taring<br>* 5.5 V maximum supply leaves little margin above the 5 V rail<br>* SOIC needs an adapter board for breadboard testing<br>* Only 5 in stock at Mouser today (more expected 10/19); also needs instructor approval</td>
 </tr>
 <tr>
-<td><img alt="Microchip MCP6V27 in SOIC-8" src="inamp-microchip-mcp6v27.jpg" width="170" /><br><strong>Option 3 (custom).</strong><br>Three-op-amp instrumentation amplifier built from 2× Microchip MCP6V27-E/SN zero-drift dual op amps and 0.1 % resistors<br><span>&#36;</span>3.20/each, <span>&#36;</span>6.40 for two (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP6V27-E-SN?qs=36WIQGTfLarwvjZsufRd4A%3D%3D">Microchip MCP6V27-E/SN at Mouser</a></td>
+<td><img alt="Microchip MCP6V27 in SOIC-8" src="../images/inamp-microchip-mcp6v27.jpg" width="170" /><br><strong>Option 3 (custom).</strong><br>Three-op-amp instrumentation amplifier built from 2× Microchip MCP6V27-E/SN zero-drift dual op amps and 0.1 % resistors<br><span>&#36;</span>3.20/each, <span>&#36;</span>6.40 for two (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP6V27-E-SN?qs=36WIQGTfLarwvjZsufRd4A%3D%3D">Microchip MCP6V27-E/SN at Mouser</a></td>
 <td>* Built only from op amps, so it satisfies the "op amp stage" rule without special approval<br>* Zero-drift op amps have about ±2 µV offset, far below the 10 µV per 0.1 kgf signal step<br>* Rail-to-rail input and output on the 5 V rail<br>* The fourth op amp is free to buffer the reference voltage</td>
 <td>* CMRR depends on resistor matching: about 7 precision resistors must be matched to 0.1 %<br>* More parts, more board area and more layout and soldering work<br>* Two SOIC-8 packages need adapters for breadboard testing</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Choice:</strong> Option 1: Texas Instruments INA125P (approved by the instructor).</p>
-<p><strong>Rationale:</strong> The load cell signal is only 4 mV at 40 kgf riding on a 2.5 V common-mode voltage, so the first stage must reject common-mode voltage very well while adding almost no offset. The INA125P is a single, proven bridge amplifier: one resistor sets the gain (G = 4 + 60 kΩ / RG, so RG = 100 Ω gives 604), its CMRR is guaranteed, and it comes in a DIP package so I can prove the whole chain on a breadboard before the PCB is milled. Its limited output swing on a 5 V supply is handled by its own internal 1.24 V reference: VREFOUT is set to 1.24 V and drives the IAREF pin directly, so zero force reads 1.24 V and 40 kgf reads about 3.7 V, inside the output swing, with no external op amp. The MCP6N11 is the lowest-cost option, but its offset is higher and its stock is low. Option 3 would need about seven matched precision resistors and three op amps; the instructor approved the INA125P and advised using it as the only amplifier.</p>
+<p><strong>Rationale:</strong> The load cell signal is only 4 mV at 40 kgf riding on a 2.5 V common-mode voltage, so the first stage must reject common-mode voltage very well while adding almost no offset. The INA125P is a single, proven bridge amplifier: one resistor sets the gain (G = 4 + 60 kΩ / RG, so RG = 100 Ω gives 604), its CMRR is guaranteed, and it comes in a DIP package so I can prove the whole chain on a breadboard before the PCB is milled. Its limited output swing on a 5 V supply is handled by its own internal 1.24 V reference: VREFOUT is set to 1.24 V and drives the IAREF pin directly, so zero force reads 1.24 V and 40 kgf reads about 3.7 V, inside the output swing, with no external op amp. The MCP6N11 is the lowest-cost option, but its offset is higher and its stock is low. Option 3 would need about seven matched precision resistors and three op amps; the instructor approved the INA125P and advised using it as the only amplifier. The INA125P therefore carries <strong>SW-06</strong> and <strong>UX-02</strong> (accurate, 0.1 kgf-resolution force at the ADC), supports <strong>SF-01</strong> (the overforce release depends on a trustworthy force reading) and meets <strong>MF-04</strong> with the MCP6N11 as a documented alternate.</p>
 <h3 id="3-op-amp-for-the-active-low-pass-filter-removed-after-instructor-review">3. Op Amp for the Active Low-Pass Filter (removed after instructor review)</h3>
 <p><em>Table 3: Low-pass filter op amp selection</em></p>
 <p><strong>Low-pass filter op amp — [Individual subsystem: force sensing board]</strong></p>
@@ -1085,17 +1103,17 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="Microchip MCP6004 in DIP-14" src="opamp-microchip-mcp6004.jpg" width="170" /><br><strong>Option 1.</strong><br>Microchip MCP6004-I/P quad op amp (DIP-14)<br><span>&#36;</span>0.60/each (Mouser); issued in class, <span>&#36;</span>0 to my budget<br><a href="https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP6004-I-P?qs=VLwvNDPaIpqIfz2%252Bgie0oA%3D%3D">Microchip MCP6004-I/P at Mouser</a></td>
+<td><img alt="Microchip MCP6004 in DIP-14" src="../images/opamp-microchip-mcp6004.jpg" width="170" /><br><strong>Option 1.</strong><br>Microchip MCP6004-I/P quad op amp (DIP-14)<br><span>&#36;</span>0.60/each (Mouser); issued in class, <span>&#36;</span>0 to my budget<br><a href="https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP6004-I-P?qs=VLwvNDPaIpqIfz2%252Bgie0oA%3D%3D">Microchip MCP6004-I/P at Mouser</a></td>
 <td>* Already in my class kit, so it costs nothing and is available now<br>* Four op amps in one package: Sallen-Key filter, REF buffer and a spare for a gain stage<br>* Rail-to-rail input and output on 1.8 V to 6.0 V, so it drives the ADC across nearly 0–5 V<br>* 1 MHz gain-bandwidth is far above the 10 Hz cutoff<br>* DIP package for breadboard prototyping</td>
 <td>* Offset up to ±4.5 mV, although after the INA125P gain this equals only about 6 µV at the input and is removed by taring<br>* Larger package than a dual op amp<br>* Lower precision than newer CMOS op amps</td>
 </tr>
 <tr>
-<td><img alt="Microchip MCP6002 in DIP-8" src="opamp-microchip-mcp6002.jpg" width="170" /><br><strong>Option 2.</strong><br>Microchip MCP6002-I/P dual op amp (DIP-8)<br><span>&#36;</span>0.45/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP6002-I-P?qs=Ux5rHyN1IXStLRM979v6Rg%3D%3D">Microchip MCP6002-I/P at Mouser</a></td>
+<td><img alt="Microchip MCP6002 in DIP-8" src="../images/opamp-microchip-mcp6002.jpg" width="170" /><br><strong>Option 2.</strong><br>Microchip MCP6002-I/P dual op amp (DIP-8)<br><span>&#36;</span>0.45/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP6002-I-P?qs=Ux5rHyN1IXStLRM979v6Rg%3D%3D">Microchip MCP6002-I/P at Mouser</a></td>
 <td>* Same rail-to-rail, 1 MHz family as the MCP6004, so the filter design is identical<br>* Smaller DIP-8 footprint<br>* Inexpensive and widely stocked</td>
 <td>* Only two op amps: the filter and REF buffer use both, leaving no spare<br>* Must be purchased, while the MCP6004 is already in hand</td>
 </tr>
 <tr>
-<td><img alt="Texas Instruments TLV9062 in SOIC-8" src="opamp-ti-tlv9062.jpg" width="170" /><br><strong>Option 3.</strong><br>Texas Instruments TLV9062IDR dual op amp (SOIC-8)<br><span>&#36;</span>1.05/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Texas-Instruments/TLV9062IDR?qs=u4fy%2FsgLU9PUtszsvUsi6w%3D%3D">TI TLV9062IDR at Mouser</a></td>
+<td><img alt="Texas Instruments TLV9062 in SOIC-8" src="../images/opamp-ti-tlv9062.jpg" width="170" /><br><strong>Option 3.</strong><br>Texas Instruments TLV9062IDR dual op amp (SOIC-8)<br><span>&#36;</span>1.05/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Texas-Instruments/TLV9062IDR?qs=u4fy%2FsgLU9PUtszsvUsi6w%3D%3D">TI TLV9062IDR at Mouser</a></td>
 <td>* Lower offset (±0.3 mV typical) and 10 MHz gain-bandwidth<br>* Rail-to-rail input and output on 1.8 V to 5.5 V<br>* SOIC-8 is compact and millable</td>
 <td>* Surface-mount only, so it needs an adapter for breadboard testing<br>* 5.5 V maximum supply leaves little margin above 5 V<br>* Extra precision and speed are not needed for a 10 Hz filter after a high-gain stage</td>
 </tr>
@@ -1108,7 +1126,7 @@
 <li><strong>A passive RC low-pass filter</strong> instead of the Sallen-Key filter: 15 kΩ and 1 µF give a cutoff of 1 / (2π × 15 kΩ × 1 µF) ≈ 10.6 Hz. That is still well above the few hertz of a human grip, and it attenuates 60 Hz mains pickup by about 15 dB; averaging the ADC readings over one mains period in firmware removes the rest. The 1 µF capacitor also acts as a charge reservoir for the ADC's sample capacitor, so the 15 kΩ source resistance does not disturb the conversion.</li>
 <li><strong>No DAC buffer:</strong> FORCE_ANA goes from DAC1 (RA2) straight to the ribbon cable, because the motor board's ADC input draws no DC current.</li>
 </ul>
-<p>Removing the MCP6004 also removes 30 mA from the worst-case power budget and one IC from the PCB.</p>
+<p>Removing the MCP6004 also removes 30 mA from the worst-case power budget and one IC from the PCB. With fewer stages the signal chain is easier to verify, which serves <strong>MF-01</strong> and <strong>MF-02</strong>: test points TP4 (INA125P output), TP5 (filtered signal) and TP6 (reference) still give access to every stage.</p>
 <h3 id="4-5-v-voltage-regulator">4. 5 V Voltage Regulator</h3>
 <p><em>Table 4: 5 V regulator selection</em></p>
 <p><strong>+5 V linear regulator — [Individual subsystem: force sensing board]</strong></p>
@@ -1122,24 +1140,24 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="STMicroelectronics L7805 in TO-220" src="reg-st-l7805.jpg" width="150" /><br><strong>Option 1.</strong><br>STMicroelectronics L7805ABV-DG 5 V, 1.5 A linear regulator (TO-220)<br><span>&#36;</span>1.04/each (Mouser); issued in class, <span>&#36;</span>0 to my budget<br><a href="https://www.mouser.com/en/ProductDetail/STMicroelectronics/L7805ABV-DG?qs=WHlX%252B%252B9%2FRwBQWEBhrAcOaw%3D%3D">ST L7805ABV-DG at Mouser</a></td>
+<td><img alt="STMicroelectronics L7805 in TO-220" src="../images/reg-st-l7805.jpg" width="150" /><br><strong>Option 1.</strong><br>STMicroelectronics L7805ABV-DG 5 V, 1.5 A linear regulator (TO-220)<br><span>&#36;</span>1.04/each (Mouser); issued in class, <span>&#36;</span>0 to my budget<br><a href="https://www.mouser.com/en/ProductDetail/STMicroelectronics/L7805ABV-DG?qs=WHlX%252B%252B9%2FRwBQWEBhrAcOaw%3D%3D">ST L7805ABV-DG at Mouser</a></td>
 <td>* 1.5 A output covers the worst-case 497 mA budget for the 5 V rail with large margin<br>* ±2 % output tolerance (AB grade) and internal current limit and thermal shutdown<br>* 7 V to 35 V input works with the 9 V adapter<br>* Through-hole TO-220 is easy to solder and bolts to a heatsink<br>* Already in my class kit and used by all three team boards</td>
 <td>* About 2 V dropout, so the input must stay above 7 V<br>* Linear regulator wastes (9 V − 5 V) × I as heat: about 2 W at the worst-case budget, so it needs a heatsink<br>* Higher quiescent current than a modern LDO</td>
 </tr>
 <tr>
-<td><img alt="Texas Instruments LM2940 in TO-220" src="reg-ti-lm2940.jpg" width="170" /><br><strong>Option 2.</strong><br>Texas Instruments LM2940CT-5.0/NOPB 5 V, 1 A low-dropout regulator (TO-220)<br><span>&#36;</span>2.04/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Texas-Instruments/LM2940CT-5.0-NOPB?qs=X1J7HmVL2ZHd4yipOGCVKg%3D%3D">TI LM2940CT-5.0/NOPB at Mouser</a></td>
+<td><img alt="Texas Instruments LM2940 in TO-220" src="../images/reg-ti-lm2940.jpg" width="170" /><br><strong>Option 2.</strong><br>Texas Instruments LM2940CT-5.0/NOPB 5 V, 1 A low-dropout regulator (TO-220)<br><span>&#36;</span>2.04/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Texas-Instruments/LM2940CT-5.0-NOPB?qs=X1J7HmVL2ZHd4yipOGCVKg%3D%3D">TI LM2940CT-5.0/NOPB at Mouser</a></td>
 <td>* Low dropout (0.5 V typical at 1 A), so it keeps working if the input sags toward 6 V<br>* 1 A output still covers the worst-case budget<br>* Reverse-battery and mirror-insertion protection<br>* Same TO-220 footprint as Option 1</td>
 <td>* Out of stock at Mouser, with stock expected January 2027 (20-week lead time)<br>* Needs a larger output capacitor with a controlled ESR to stay stable<br>* Costs more and is not in the class kit</td>
 </tr>
 <tr>
-<td><img alt="Microchip MCP1702 in TO-92" src="reg-microchip-mcp1702.jpg" width="170" /><br><strong>Option 3.</strong><br>Microchip MCP1702-5002E/TO 5 V, 250 mA low-dropout regulator (TO-92)<br><span>&#36;</span>0.65/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP1702-5002E-TO?qs=jZi1jxfVU96jFzuz5k6DAw%3D%3D">Microchip MCP1702-5002E/TO at Mouser</a></td>
+<td><img alt="Microchip MCP1702 in TO-92" src="../images/reg-microchip-mcp1702.jpg" width="170" /><br><strong>Option 3.</strong><br>Microchip MCP1702-5002E/TO 5 V, 250 mA low-dropout regulator (TO-92)<br><span>&#36;</span>0.65/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP1702-5002E-TO?qs=jZi1jxfVU96jFzuz5k6DAw%3D%3D">Microchip MCP1702-5002E/TO at Mouser</a></td>
 <td>* Very low quiescent current (about 2 µA), useful for battery designs<br>* Small through-hole TO-92 package<br>* Needs only two small ceramic capacitors</td>
 <td>* 250 mA maximum output is below the worst-case 497 mA budget for the 5 V rail<br>* 13.2 V maximum input leaves little margin for adapter overshoot<br>* TO-92 can only dissipate a fraction of a watt, so a 4 V drop limits it to about 100 mA in practice</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Choice:</strong> Option 1: STMicroelectronics L7805ABV-DG.</p>
-<p><strong>Rationale:</strong> The <a href="../../05-Power-Budget/Power-Budget/">power budget</a> puts the worst-case 5 V rail current at 497 mA including the 25 % safety margin, which rules out the 250 mA MCP1702. Both TO-220 regulators can supply it, but the L7805ABV-DG is already in my kit, is the regulator the whole team uses (shared footprint and spares), and is in stock, while the LM2940 is back-ordered until 2027. Its 2 V dropout is not a problem because the 9 V adapter leaves 2 V of headroom above the 7 V minimum input. At the worst-case budget it would dissipate about 2 W, so I will mount it on a Boyd 507302B00000G TO-220 heatsink (<span>&#36;</span>0.34); at the expected normal draw of under 100 mA it dissipates less than 0.4 W.</p>
+<p><strong>Rationale:</strong> The <a href="../../05-Power-Budget/Power-Budget/">power budget</a> puts the worst-case 5 V rail current at 459.4 mA including the 25 % safety margin, which rules out the 250 mA MCP1702. Both TO-220 regulators can supply it, but the L7805ABV-DG is already in my kit, is the regulator the whole team uses (shared footprint and spares), and is in stock, while the LM2940 is back-ordered until 2027. Its 2 V dropout is not a problem because the 9 V adapter leaves 2 V of headroom above the 7 V minimum input. At the worst-case budget it would dissipate about 1.8 W ((9 V − 5 V) × 459.4 mA), so I will mount it on a Boyd 507302B00000G TO-220 heatsink (<span>&#36;</span>0.36, 24 °C/W), which keeps the junction near 80 °C even then; at the expected normal draw of under 100 mA it dissipates less than 0.4 W. The L7805ABV-DG meets <strong>MF-04</strong> (a common part, with the LM2940CT-5.0 as the documented alternate) and <strong>MF-05</strong> (issued in class at no cost).</p>
 <h3 id="5-external-power-source-9-v-wall-adapter">5. External Power Source (9 V Wall Adapter)</h3>
 <p><em>Table 5: External power source selection</em></p>
 <p><strong>9 V wall adapter — [Individual subsystem: force sensing board]</strong></p>
@@ -1153,24 +1171,24 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="BestCH 9 V 3 A wall adapter" src="psu-bestch-9v3a.jpg" width="150" /><br><strong>Option 1.</strong><br>BestCH 9 V 3 A switching wall adapter (issued in class)<br><span>&#36;</span>4.52/each (Amazon B09ZTKTLGW); <span>&#36;</span>0 to my budget<br><a href="https://www.amazon.com/dp/B09ZTKTLGW">BestCH 9 V 3 A adapter on Amazon</a></td>
+<td><img alt="BestCH 9 V 3 A wall adapter" src="../images/psu-bestch-9v3a.jpg" width="150" /><br><strong>Option 1.</strong><br>BestCH 9 V 3 A switching wall adapter (issued in class)<br><span>&#36;</span>4.52/each (Amazon B09ZTKTLGW); <span>&#36;</span>0 to my budget<br><a href="https://www.amazon.com/dp/B09ZTKTLGW">BestCH 9 V 3 A adapter on Amazon</a></td>
 <td>* 3 A output covers the regulator's full 1.5 A rating with 1.5 A to spare<br>* Already issued in class, so it costs nothing and is available now<br>* 9 V gives the L7805 its required 2 V of headroom without excessive heat<br>* 100–240 VAC input and a 5.5 mm barrel plug</td>
 <td>* No manufacturer datasheet, only the specifications in the store listing<br>* Plug inner diameter and polarity are not stated, so the fit to the PJ-102AH jack and center-positive polarity must be checked with a multimeter before first power-up<br>* Amazon parts are not reimbursable, so a replacement would come out of pocket</td>
 </tr>
 <tr>
-<td><img alt="Triad Magnetics WSU090-2000 wall adapter" src="psu-triad-wsu090-2000.jpg" width="170" /><br><strong>Option 2.</strong><br>Triad Magnetics WSU090-2000 9 V 2 A wall adapter<br><span>&#36;</span>12.43/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Triad-Magnetics/WSU090-2000?qs=B4sXYbYweUqXGsCe5mLH3w%3D%3D">Triad WSU090-2000 at Mouser</a></td>
+<td><img alt="Triad Magnetics WSU090-2000 wall adapter" src="../images/psu-triad-wsu090-2000.jpg" width="170" /><br><strong>Option 2.</strong><br>Triad Magnetics WSU090-2000 9 V 2 A wall adapter<br><span>&#36;</span>12.43/each (Mouser)<br><a href="https://www.mouser.com/en/ProductDetail/Triad-Magnetics/WSU090-2000?qs=B4sXYbYweUqXGsCe5mLH3w%3D%3D">Triad WSU090-2000 at Mouser</a></td>
 <td>* Full <a href="https://catalog.triadmagnetics.com/Asset/WSU090-2000.pdf">datasheet</a>: ±5 % regulation, 150 mV ripple maximum, short-circuit and over-voltage protection<br>* UL 62368-1 listed and DoE Level VI efficient<br>* 2.1 × 5.5 mm center-positive plug matches standard barrel jacks<br>* 2 A covers the regulator's 1.5 A rating</td>
 <td>* Costs <span>&#36;</span>12.43 of my budget plus shipping<br>* Only 500 mA of spare capacity above the regulator rating<br>* Must be ordered and waited for</td>
 </tr>
 <tr>
-<td><img alt="Adafruit 63 9 V 1 A wall adapter" src="psu-adafruit-63.jpg" width="170" /><br><strong>Option 3.</strong><br>Adafruit 63 9 V 1 A regulated switching wall adapter<br><span>&#36;</span>8.95/each (Adafruit)<br><a href="https://www.adafruit.com/product/63">Adafruit 63 product page</a></td>
+<td><img alt="Adafruit 63 9 V 1 A wall adapter" src="../images/psu-adafruit-63.jpg" width="170" /><br><strong>Option 3.</strong><br>Adafruit 63 9 V 1 A regulated switching wall adapter<br><span>&#36;</span>8.95/each (Adafruit)<br><a href="https://www.adafruit.com/product/63">Adafruit 63 product page</a></td>
 <td>* UL listed, with a datasheet linked on the product page<br>* 2.1 × 5.5 mm center-positive plug<br>* Small and light; 100–240 VAC input</td>
 <td>* 1 A is less than the regulator's 1.5 A rating, so the power budget's source check fails (−500 mA)<br>* Adds another vendor, order and shipping charge<br>* Costs more than the class-issued adapter</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Choice:</strong> Option 1: BestCH 9 V 3 A wall adapter (class-issued), with Option 2 as the documented backup.</p>
-<p><strong>Rationale:</strong> The power budget requires the source to supply the full rating of every regulator connected to it. The BestCH adapter supplies 3 A against the L7805's 1.5 A, so 1.5 A remains, and it is already in hand at no cost. A 9 V supply is the best voltage for this board: it gives the L7805 its 2 V of dropout headroom while keeping the regulator's heat lower than a 12 V adapter would. Because the adapter has no manufacturer datasheet, I will measure its polarity and no-load voltage and check the plug fit on the PJ-102AH jack before connecting the board. If it fails those checks, the Triad WSU090-2000 is the replacement: it has a full datasheet and safety listing and still passes the power budget at 2 A. The Adafruit adapter was rejected because its 1 A rating fails the source check.</p>
+<p><strong>Rationale:</strong> The power budget requires the source to supply the full rating of every regulator connected to it. The BestCH adapter supplies 3 A against the L7805's 1.5 A, so 1.5 A remains, and it is already in hand at no cost. A 9 V supply is the best voltage for this board: it gives the L7805 its 2 V of dropout headroom while keeping the regulator's heat lower than a 12 V adapter would. Because the adapter has no manufacturer datasheet, I will measure its polarity and no-load voltage and check the plug fit on the PJ-102AH jack before connecting the board. If it fails those checks, the Triad WSU090-2000 is the replacement: it has a full datasheet and safety listing and still passes the power budget at 2 A. The Adafruit adapter was rejected because its 1 A rating fails the source check. This choice meets <strong>MF-04</strong> (the Triad WSU090-2000 is the documented replacement) and <strong>MF-05</strong> (no cost to the budget).</p>
 <h2 id="summary-of-selected-components">Summary of Selected Components</h2>
 <p><em>Table 6: Final selections for the force sensing board</em></p>
 <table>
@@ -1189,7 +1207,7 @@
 <td>Phidgets 3135_0</td>
 <td><span>&#36;</span>7.00</td>
 <td>2 (1 spare)</td>
-<td>Phidgets</td>
+<td>Phidgets (out of pocket)</td>
 </tr>
 <tr>
 <td>Instrumentation amplifier</td>
@@ -1207,7 +1225,7 @@
 </tr>
 <tr>
 <td>5 V regulator</td>
-<td>ST L7805ABV-DG (+ Boyd 507302B00000G heatsink, <span>&#36;</span>0.34)</td>
+<td>ST L7805ABV-DG (+ Boyd 507302B00000G heatsink, <span>&#36;</span>0.36)</td>
 <td><span>&#36;</span>0</td>
 <td>1</td>
 <td>Class kit</td>
@@ -1221,7 +1239,7 @@
 </tr>
 </tbody>
 </table>
-<p>The major components above cost <span>&#36;</span>39.56 of my <span>&#36;</span>60 budget; connectors, sockets and the heatsink bring the planned order to about <span>&#36;</span>50 before shipping.</p>
+<p>The load cells are bought out of pocket. Everything charged to my <span>&#36;</span>60 budget is one Digi-Key order: <span>&#36;</span>39.42 of parts (the INA125P, heatsink, connectors, fuse clips, capacitors, resistors and spares) plus <span>&#36;</span>8.49 shipping and <span>&#36;</span>4.52 tariff, <span>&#36;</span>52.43 in total (see the <a href="../../03-BOM/BOM/">Bill of Materials</a>).</p>
 <h2 id="microcontroller-pin-table">Microcontroller Pin Table</h2>
 <p><em>Table 7: PIC18F57Q43 Curiosity Nano pin assignments on the force sensing board</em></p>
 <table>
@@ -1301,20 +1319,20 @@
 <td>J2 pin 3 → motor board</td>
 </tr>
 <tr>
-<td>Debug LED (on PCB, planned)</td>
+<td>Debug LED</td>
 <td>GPIO</td>
 <td>Digital out</td>
 <td>RD2</td>
 <td>Out</td>
-<td>LED + 1 kΩ resistor to GND</td>
+<td>Red LED D2 through 1 kΩ (R10) to GND</td>
 </tr>
 <tr>
-<td>Debug button (on PCB, planned)</td>
+<td>Debug button</td>
 <td>GPIO</td>
-<td>Digital in (weak pull-up)</td>
+<td>Digital in (external 10 kΩ pull-up R11, RC debounce C11)</td>
 <td>RD3</td>
 <td>In</td>
-<td>Pushbutton to GND</td>
+<td>Pushbutton SW1 to GND</td>
 </tr>
 <tr>
 <td>On-board LED0</td>
@@ -1374,15 +1392,27 @@
 </tr>
 </tbody>
 </table>
-<p>The ribbon connector pinouts (J1 to the UI board, J2 to the motor board) are listed in Tables 2 and 3 of the <a href="../../01-Block-Diagram/Block-Diagram/">block diagram page</a>. The debug LED and button pins are new since the block diagram and will be confirmed in the schematic.</p>
+<p>The ribbon connector pinouts (J1 to the UI board, J2 to the motor board) are listed in Tables 2 and 3 of the <a href="../../01-Block-Diagram/Block-Diagram/">block diagram page</a>. The debug LED (RD2) and debug button (RD3) are on sheet 2 of the <a href="../../04-Schematic/schematic/">schematic</a>.</p>
+<h2 id="mcc-configuration">MCC Configuration</h2>
+<p>The pin assignment above was checked in MPLAB Code Configurator (MCC Melody) for the PIC18F57Q43. The clock is the 64 MHz internal oscillator. The ADCC reads the filtered force on RA0 against VDD. DAC1 uses VDD and VSS as references and drives DAC1OUT1 on RA2 (FORCE_ANA). UART1 (RC2 TX, RC3 RX) talks to the UI board and UART3 (RA3 TX, RA4 RX) talks to the motor board, both at 9600 baud, 8 data bits, no parity, 1 stop bit, as in the team software proposal. RD0 (UI_RUN) and RD3 (debug button) are digital inputs with the internal weak pull-ups off, because the board has external resistors; RD1 (FORCE_OK) and RD2 (debug LED) are digital outputs. MCC generated the code with no pin conflicts.</p>
+<p><img alt="MCC Pin Grid View for the force sensing board" src="../images/mcc-pin-grid.png" width="750" /></p>
+<p><em>Figure 1: MCC Pin Grid View.</em></p>
+<p><img alt="MCC Pins table with custom pin names" src="../images/mcc-pins.png" width="750" /></p>
+<p><em>Figure 2: Pin names, directions and analog settings in MCC.</em></p>
+<p><img alt="MCC ADCC settings" src="../images/mcc-adcc.png" width="370" /> <img alt="MCC DAC1 settings" src="../images/mcc-dac1.png" width="370" /></p>
+<p><em>Figure 3: ADCC (left) and DAC1 (right) settings.</em></p>
+<p><img alt="MCC UART1 settings" src="../images/mcc-uart1.png" width="370" /> <img alt="MCC UART3 settings" src="../images/mcc-uart3.png" width="370" /></p>
+<p><em>Figure 4: UART1 (left, to the UI board) and UART3 (right, to the motor board) settings.</em></p>
 <h2 id="use-of-generative-ai">Use of Generative AI</h2>
-<p>Generative AI (Claude) was used to research and compare candidate parts, collect prices, photos and datasheet values, draft the selection tables, pros, cons and rationale on this page, and fill in the power budget template. I reviewed the part choices, prices and pin assignments and edited the text before submission.</p>
+<p>Generative AI (Claude) was used to research and compare candidate parts, collect prices, photos and datasheet values, draft the selection tables, pros, cons and rationale on this page, and make the power budget template. I reviewed the part choices, prices and pin assignments and edited the text before submission.</p>
 <p>Query text (translated from Chinese):</p>
 <ol>
 <li>How do we decide our parts? Is it best for the group to use the same manufacturer? Each of us has a <span>&#36;</span>60 budget. Do a detailed investigation to help us select parts.</li>
 <li>Use all the parts you recommended. We can spend more as long as it stays under budget; prioritize making sure it works and not adding complexity.</li>
 <li>What do I need to submit?</li>
 <li>Here is the power budget, check to make sure every requirement of the assignment is covered.</li>
+<li>Check for images that are missing in the component selection, give me all the links to the images. Add a link to the team website on the home page.</li>
+<li>Read the External Design Review and Hardware Orders assignment pages and check my datasheet against them.</li>
 </ol>
 
 

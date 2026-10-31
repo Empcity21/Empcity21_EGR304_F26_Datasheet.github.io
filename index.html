@@ -465,6 +465,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#team-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Website
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -825,6 +834,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#team-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Website
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -856,7 +874,7 @@ as part of<br>
 <font size= "8"> GripRx</font><br>
 for<br>
 <font size= "5"> Team 103 </font><br></p>
-<p><strong>Submission: Sep 2nd, 2026</strong>
+<p><strong>Last updated: October 30, 2026</strong>
 </center></p>
 <h2 id="introduction">Introduction</h2>
 <p>This datasheet documents my individual contributions to the Team 103 
@@ -864,12 +882,18 @@ design project for EGR 304, Fall 2026.</p>
 <h3 id="project-summary">Project Summary</h3>
 <p>Team 103 is designing <strong>GripRx</strong>, a prescription-based automatic-resistance grip trainer for hand rehabilitation. The device measures the force a patient applies through a load cell and automatically sets its own mechanical resistance to the level prescribed by a therapist. The system is split into three boards, each built around a PIC18F57Q43 Curiosity Nano: a UI board, a force sensing board, and a motor board, connected in a daisy chain by 8-pin ribbon cables.</p>
 <h3 id="my-contribution">My Contribution</h3>
-<p>I design the <strong>force sensing board</strong>, the center board of the daisy chain. It measures grip force (load cell, INA125P instrumentation amplifier and active low-pass filter into the ADC), runs the training-session logic, and exchanges messages with the UI board and the motor board.</p>
+<p>I design the <strong>force sensing board</strong>, the center board of the daisy chain. It measures grip force (load cell, INA125P instrumentation amplifier and a passive RC low-pass filter into the ADC), runs the training-session logic, and exchanges messages with the UI board and the motor board.</p>
 <h2 id="datasheet-pages">Datasheet Pages</h2>
 <ul>
 <li><a href="01-Block-Diagram/Block-Diagram/">Block Diagram</a>: individual block diagram of the force sensing board</li>
 <li><a href="02-Component-Selection/Component-Selection/">Component Selection</a>: candidate parts, choices and rationale for each major component, and the microcontroller pin table</li>
+<li><a href="03-BOM/BOM/">Bill of Materials</a>: every component on the board with order quantities, vendors, datasheets and purchase requests</li>
+<li><a href="04-Schematic/schematic/">Schematic</a>: two-sheet KiCad schematic of the force sensing board, with PDF and project downloads</li>
 <li><a href="05-Power-Budget/Power-Budget/">Power Budget</a>: worst-case current budget for the +5 V rail, regulator and 9 V wall adapter</li>
+</ul>
+<h2 id="team-website">Team Website</h2>
+<ul>
+<li><a href="https://egr304-2026-f-103.github.io/">Team 103 GripRx website</a>: team organization, user needs, product requirements, design ideation, team block diagram and software proposal</li>
 </ul>
 
 

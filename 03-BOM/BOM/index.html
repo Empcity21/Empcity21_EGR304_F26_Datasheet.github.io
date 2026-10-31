@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#bill-of-materials-force-sensing-board" class="md-skip">
           Skip to content
         </a>
       
@@ -551,6 +551,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -579,6 +581,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -596,18 +600,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-table" class="md-nav__link">
+  <a href="#budget" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials Example (as Table)
+      Budget
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-image" class="md-nav__link">
+  <a href="#bill-of-materials" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials Example (as Image)
+      Bill of Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-ribbon-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Ribbon Cables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-quantities-and-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes on Quantities and Parts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purchase-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purchase Requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-of-generative-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use of Generative AI
     </span>
   </a>
   
@@ -794,6 +843,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -811,18 +862,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-table" class="md-nav__link">
+  <a href="#budget" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials Example (as Table)
+      Budget
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-image" class="md-nav__link">
+  <a href="#bill-of-materials" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials Example (as Image)
+      Bill of Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-ribbon-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Ribbon Cables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-quantities-and-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes on Quantities and Parts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purchase-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purchase Requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-of-generative-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use of Generative AI
     </span>
   </a>
   
@@ -851,59 +947,538 @@
   
 
 
-  <h1>Bill of Materials</h1>
-
+<h1 id="bill-of-materials-force-sensing-board">Bill of Materials: Force Sensing Board</h1>
+<p><strong>Zice Sun</strong> · Team 103 · Project: <strong>GripRx</strong> · Updated October 30, 2026</p>
 <h2 id="overview">Overview</h2>
-<p>written context</p>
-<h2 id="bill-of-materials-example-as-table">Bill of Materials Example (as Table)</h2>
-<p><em>Table ##: An example of one approach to adding your BOM table to this section.</em></p>
+<p>This page lists every component on my force sensing board schematic, including the parts handed out in class, the parts in my student kit and the parts taken from the Peralta lab stock, plus the debugging hardware (test points, jumpers, the spare GPIO header, the fuse clips and the IC socket). The order quantity follows the course rule: one per instance for the breadboard prototype, one per instance for the PCB, and one or two spares. Parts that can move from the breadboard to the PCB because they sit in a socket or connect by wires (the INA125P, the load cell) are ordered once plus a spare. The table is sorted by vendor, and one purchase request was made for each vendor.</p>
+<h2 id="budget">Budget</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><strong>Part Name/Description</strong></th>
-<th style="text-align: left;"><strong>Qty</strong></th>
-<th style="text-align: left;"><strong>Unit Cost</strong></th>
-<th style="text-align: left;"><strong>Total Cost</strong></th>
-<th style="text-align: left;"><strong>Manufacture</strong></th>
-<th style="text-align: left;"><strong>Manufacturer #</strong></th>
-<th style="text-align: left;"><strong>Vendor Link</strong></th>
-<th style="text-align: left;"><strong>Datasheet Link</strong></th>
-<th style="text-align: left;"><strong>Schematic Reference Designators</strong></th>
+<th>Item</th>
+<th>Amount</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">8-bit SIPO/SISO Shift Register, SOIC-16 package</td>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">$0.49</td>
-<td style="text-align: left;">$ 0.49</td>
-<td style="text-align: left;">NXP</td>
-<td style="text-align: left;">74HC595D,112</td>
-<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/nexperia-usa-inc/74HC595D-112/763550">DigiKey</a></td>
-<td style="text-align: left;"><a href="https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf">datasheet link</a></td>
-<td style="text-align: left;">U1</td>
+<td>Digi-Key parts (11 lines, including spares)</td>
+<td><span>&#36;</span>39.42</td>
 </tr>
 <tr>
-<td style="text-align: left;">0.1 µF Ceramic Capacitor, +/-10%, X7R, 50V, 0805 package</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">0.2750</td>
-<td style="text-align: left;">$2.75</td>
-<td style="text-align: left;">KEMET</td>
-<td style="text-align: left;">C0805F104K5RACTU</td>
-<td style="text-align: left;">PRLTA 109</td>
-<td style="text-align: left;">n/a</td>
-<td style="text-align: left;">C2, C4, C6, C7, C8, C9, C10, C11, C12, C16</td>
+<td>Digi-Key shipping (FedEx Ground, cart estimate)</td>
+<td><span>&#36;</span>8.49</td>
+</tr>
+<tr>
+<td>Digi-Key tariff (cart estimate)</td>
+<td><span>&#36;</span>4.52</td>
+</tr>
+<tr>
+<td><strong>Total charged to my <span>&#36;</span>60 budget</strong></td>
+<td><strong><span>&#36;</span>52.43</strong></td>
+</tr>
+<tr>
+<td>Remaining</td>
+<td><span>&#36;</span>7.57</td>
+</tr>
+<tr>
+<td>Cost of one board, purchased parts only, no spares (quantity-1 prices)</td>
+<td><span>&#36;</span>26.32</td>
+</tr>
+<tr>
+<td>Load cells, Phidgets 3135_0 x 2 (bought out of pocket)</td>
+<td><span>&#36;</span>14.00 plus Phidgets shipping, not charged (course rule)</td>
+</tr>
+<tr>
+<td>IDC ribbon sockets (bought out of pocket)</td>
+<td><span>&#36;</span>12.00, not charged (course rule)</td>
+</tr>
+<tr>
+<td>Peralta stock, class-issued parts and kit parts</td>
+<td>Not charged (course rule)</td>
 </tr>
 </tbody>
 </table>
-<p>Note: Setting it up as a table is nice because it is completely viewable without scaling issues. <ins>Downside</ins> is that you have to do the math.</p>
+<p>Prices were checked on October 30, 2026 at the linked vendor. The course budget excludes development kits, parts from Peralta, free parts and parts bought out of pocket. Because the purchase request form has lines for tax and shipping, I count them toward my budget, using the Digi-Key cart estimates. A second vendor (Phidgets) would add its own shipping and push the total over <span>&#36;</span>60, so I am buying the two load cells myself; the whole charged order is then a single Digi-Key order. Under the team requirement MF-05 (prototype BOM no more than <span>&#36;</span>150), my board contributes <span>&#36;</span>26.32 in purchased parts.</p>
+<h2 id="bill-of-materials">Bill of Materials</h2>
+<p><em>Table 1: Bill of materials for the force sensing board, sorted by vendor. Manufacturer part numbers and datasheets are in Table 2.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Part Name/Description</strong></th>
+<th style="text-align: left;"><strong>Ref Designators</strong></th>
+<th style="text-align: left;"><strong>Qty/Board</strong></th>
+<th style="text-align: left;"><strong>Order Qty</strong></th>
+<th style="text-align: left;"><strong>Unit Cost</strong></th>
+<th style="text-align: left;"><strong>Total Cost</strong></th>
+<th style="text-align: left;"><strong>Vendor Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Instrumentation amplifier, DIP-16</td>
+<td style="text-align: left;">U3</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><span>&#36;</span>12.78</td>
+<td style="text-align: left;"><span>&#36;</span>25.56</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/texas-instruments/INA125P/254670">Digi-Key INA125P-ND</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">TO-220 clip-on heatsink, 24 °C/W</td>
+<td style="text-align: left;">U1 heatsink</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><span>&#36;</span>0.36</td>
+<td style="text-align: left;"><span>&#36;</span>0.72</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/boyd-laconia-llc/507302B00000G/5849">Digi-Key HS115-ND</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Terminal block, 4 positions, 5.08 mm, load cell wires</td>
+<td style="text-align: left;">J4</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><span>&#36;</span>1.25</td>
+<td style="text-align: left;"><span>&#36;</span>2.50</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/on-shore-technology-inc/OSTTE040161/614586">Digi-Key ED2637-ND</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Shrouded box header, 2 x 4, 2.54 mm, ribbon to UI and motor boards</td>
+<td style="text-align: left;">J1, J2</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><span>&#36;</span>1.03</td>
+<td style="text-align: left;"><span>&#36;</span>3.09</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/61200821621/4846916">Digi-Key 732-5395-ND</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Jumper shunt, 2.54 mm</td>
+<td style="text-align: left;">JP1, JP2</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"><span>&#36;</span>0.029</td>
+<td style="text-align: left;"><span>&#36;</span>0.29</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/sullins-connector-solutions/SPC02SYAN/76375">Digi-Key S9001-ND</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Schottky diode 40 V 3 A, axial, reverse-polarity protection</td>
+<td style="text-align: left;">D4</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><span>&#36;</span>0.71</td>
+<td style="text-align: left;"><span>&#36;</span>2.13</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/taiwan-semiconductor-corporation/1N5822/7366597">Digi-Key 1801-1N5822CT-ND</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Ceramic capacitor 0.33 µF 50 V X7R, radial 2.5 mm</td>
+<td style="text-align: left;">C2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><span>&#36;</span>0.35</td>
+<td style="text-align: left;"><span>&#36;</span>1.05</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/tdk/FG14X7R1H334KNT06/5802753">Digi-Key 445-173139-1-ND</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Ceramic capacitor 1 µF 25 V X7R, radial 5 mm, RC filter</td>
+<td style="text-align: left;">C8</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><span>&#36;</span>0.35</td>
+<td style="text-align: left;"><span>&#36;</span>1.05</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/tdk/FG28X7R1E105KRT06/5803197">Digi-Key 445-173583-1-ND</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Resistor 100 Ω 1 % 1/4 W metal film, INA125P gain resistor</td>
+<td style="text-align: left;">R2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"><span>&#36;</span>0.042</td>
+<td style="text-align: left;"><span>&#36;</span>0.42</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/yageo/MFR-25FBF52-100R/12795">Digi-Key 100XBK-ND</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Resistor 15 kΩ 1 % 1/4 W metal film, RC filter</td>
+<td style="text-align: left;">R5</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"><span>&#36;</span>0.042</td>
+<td style="text-align: left;"><span>&#36;</span>0.42</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/yageo/MFR-25FBF52-15K/13252">Digi-Key 15.0KXBK-ND</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Fuse clip for 5 x 20 mm fuse, PCB mount</td>
+<td style="text-align: left;">F1 holder</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><span>&#36;</span>0.44</td>
+<td style="text-align: left;"><span>&#36;</span>2.19</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/littelfuse-inc/01000056Z/2498892">Digi-Key F3784-ND</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Single-point load cell, 50 kg (CZL635-50)</td>
+<td style="text-align: left;">Off-board via J4</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><span>&#36;</span>7.00</td>
+<td style="text-align: left;"><span>&#36;</span>14.00 out of pocket</td>
+<td style="text-align: left;"><a href="https://www.phidgets.com/?prodid=226">Phidgets 3135_0</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">IC socket, DIP-16, 7.62 mm</td>
+<td style="text-align: left;">U3 socket</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Peralta stock, Course list row 79</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ceramic capacitor 0.1 µF 50 V</td>
+<td style="text-align: left;">C3, C5, C6, C11</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Peralta stock, Course list row 81</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cartridge fuse 1 A, 5 x 20 mm</td>
+<td style="text-align: left;">F1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Peralta stock, Course list row 85</td>
+</tr>
+<tr>
+<td style="text-align: left;">DC barrel jack, 2.1 x 5.5 mm, PCB</td>
+<td style="text-align: left;">J3</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Peralta stock, Course list row 64 (PJ-102AH)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Male header strip 1 x 40, 2.54 mm, breakaway</td>
+<td style="text-align: left;">J5, JP1, JP2, TP1–TP7</td>
+<td style="text-align: left;">21 pins</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Peralta stock, Course list row 75</td>
+</tr>
+<tr>
+<td style="text-align: left;">Female header strip 1 x 40, 2.54 mm, cut to 1 x 28</td>
+<td style="text-align: left;">U2 socket</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Peralta stock, Course list row 76</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resistor 1 kΩ 1/4 W</td>
+<td style="text-align: left;">R1, R10</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0 (owned)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Student kit</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resistor 330 Ω 1/4 W</td>
+<td style="text-align: left;">R8</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0 (owned)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Student kit</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resistor 10 kΩ 1/4 W</td>
+<td style="text-align: left;">R9, R11</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0 (owned)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Student kit</td>
+</tr>
+<tr>
+<td style="text-align: left;">LED, green, power indicator</td>
+<td style="text-align: left;">D1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0 (owned)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Student kit</td>
+</tr>
+<tr>
+<td style="text-align: left;">LED, red, debug</td>
+<td style="text-align: left;">D2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0 (owned)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Student kit</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tactile pushbutton, debug</td>
+<td style="text-align: left;">SW1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0 (owned)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Student kit</td>
+</tr>
+<tr>
+<td style="text-align: left;">PIC18F57Q43 Curiosity Nano</td>
+<td style="text-align: left;">U2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0 (issued)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Issued in class</td>
+</tr>
+<tr>
+<td style="text-align: left;">5 V linear regulator, 1.5 A, TO-220</td>
+<td style="text-align: left;">U1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0 (issued)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Issued in class</td>
+</tr>
+<tr>
+<td style="text-align: left;">9 V 3 A AC/DC wall adapter</td>
+<td style="text-align: left;">Off-board via J3</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0 (issued)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Issued in class</td>
+</tr>
+<tr>
+<td style="text-align: left;">IDC ribbon socket, 2 x 4, 2.54 mm (team cables)</td>
+<td style="text-align: left;">Ribbon A and B ends</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;"><span>&#36;</span>2.00</td>
+<td style="text-align: left;"><span>&#36;</span>12.00 out of pocket</td>
+<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/61200823021/4846918">Digi-Key 732-5444-ND</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Flat ribbon cable, 8 conductors (team cables)</td>
+<td style="text-align: left;">Ribbon A and B</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">as needed</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><span>&#36;</span>0</td>
+<td style="text-align: left;">Lab stock (ask the TA)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total charged to budget</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong><span>&#36;</span>52.43</strong></td>
+<td style="text-align: left;">Digi-Key parts <span>&#36;</span>39.42 + shipping <span>&#36;</span>8.49 + tariff <span>&#36;</span>4.52</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 2: Manufacturer part numbers and datasheets.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Ref Designators</strong></th>
+<th style="text-align: left;"><strong>Manufacturer</strong></th>
+<th style="text-align: left;"><strong>Manufacturer #</strong></th>
+<th style="text-align: left;"><strong>Datasheet</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">U3</td>
+<td style="text-align: left;">Texas Instruments</td>
+<td style="text-align: left;">INA125P</td>
+<td style="text-align: left;"><a href="../datasheets/U3_INA125.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">U1 heatsink</td>
+<td style="text-align: left;">Boyd</td>
+<td style="text-align: left;">507302B00000G</td>
+<td style="text-align: left;"><a href="../datasheets/U1_Heatsink_Boyd_507302B00000G.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">J4</td>
+<td style="text-align: left;">On Shore Technology</td>
+<td style="text-align: left;">OSTTE040161</td>
+<td style="text-align: left;"><a href="../datasheets/J4_OSTTExx0161.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">J1, J2</td>
+<td style="text-align: left;">Würth Elektronik</td>
+<td style="text-align: left;">61200821621</td>
+<td style="text-align: left;"><a href="../datasheets/J1_J2_61200821621.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">JP1, JP2</td>
+<td style="text-align: left;">Sullins</td>
+<td style="text-align: left;">SPC02SYAN</td>
+<td style="text-align: left;"><a href="../datasheets/JP_Shunt_SPC02SYAN.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">D4</td>
+<td style="text-align: left;">Taiwan Semiconductor</td>
+<td style="text-align: left;">1N5822</td>
+<td style="text-align: left;"><a href="../datasheets/D4_1N5822.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">C2</td>
+<td style="text-align: left;">TDK</td>
+<td style="text-align: left;">FG14X7R1H334KNT06</td>
+<td style="text-align: left;"><a href="../datasheets/C2_FG14X7R1H334KNT06.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">C8</td>
+<td style="text-align: left;">TDK</td>
+<td style="text-align: left;">FG28X7R1E105KRT06</td>
+<td style="text-align: left;"><a href="../datasheets/C8_FG28X7R1E105KRT06.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">R2</td>
+<td style="text-align: left;">YAGEO</td>
+<td style="text-align: left;">MFR-25FBF52-100R</td>
+<td style="text-align: left;"><a href="../datasheets/R2_R5_Yageo_MFR.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">R5</td>
+<td style="text-align: left;">YAGEO</td>
+<td style="text-align: left;">MFR-25FBF52-15K</td>
+<td style="text-align: left;"><a href="../datasheets/R2_R5_Yageo_MFR.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">F1 holder</td>
+<td style="text-align: left;">Littelfuse</td>
+<td style="text-align: left;">01000056Z</td>
+<td style="text-align: left;"><a href="../datasheets/F1_Littelfuse_01000056Z.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Off-board via J4</td>
+<td style="text-align: left;">Phidgets</td>
+<td style="text-align: left;">3135_0</td>
+<td style="text-align: left;"><a href="../datasheets/LoadCell_Phidgets_3135_0_Mechanical.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">U2</td>
+<td style="text-align: left;">Microchip</td>
+<td style="text-align: left;">DM164150</td>
+<td style="text-align: left;"><a href="../datasheets/U2_DM164150_UserGuide.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">U1</td>
+<td style="text-align: left;">STMicroelectronics</td>
+<td style="text-align: left;">L7805ABV-DG</td>
+<td style="text-align: left;"><a href="../datasheets/U1_ST_L78.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Off-board via J3</td>
+<td style="text-align: left;">BestCH</td>
+<td style="text-align: left;">B09ZTKTLGW</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ribbon A and B ends</td>
+<td style="text-align: left;">Würth Elektronik</td>
+<td style="text-align: left;">61200823021</td>
+<td style="text-align: left;"><a href="../datasheets/IDC_61200823021.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">U3 socket</td>
+<td style="text-align: left;">Lab stock (family drawing)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><a href="../datasheets/U3_Socket_EDxxDT.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">J3</td>
+<td style="text-align: left;">Lab stock (family drawing)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><a href="../datasheets/J3_PJ-102AH.pdf">PDF</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">J5, JP1, JP2, TP1–TP7</td>
+<td style="text-align: left;">Lab stock (family drawing)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><a href="../datasheets/Header_Sullins_PRPC.pdf">PDF</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="team-ribbon-cables">Team Ribbon Cables</h2>
+<p>My board sits in the middle of the daisy chain, so both ribbon cables (Ribbon A to the UI board and Ribbon B to the motor board) plug into my J1 and J2 headers. Each cable needs two Würth 61200823021 IDC sockets (<a href="https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/61200823021/4846918">Digi-Key 732-5444-ND</a>, <span>&#36;</span>2.00 each, <a href="../datasheets/IDC_61200823021.pdf">datasheet</a>) and a length of 8-conductor ribbon cable from the lab. I am buying the six sockets for the team (four plus two spares, <span>&#36;</span>12.00) out of pocket, so they are not on a purchase request and do not count toward my <span>&#36;</span>60 budget, as the course rules allow. The ribbon cable itself is not ordered from Digi-Key, because it is sold only as a 300 ft spool.</p>
+<h2 id="notes-on-quantities-and-parts">Notes on Quantities and Parts</h2>
 <ul>
-<li>You could also import your BOM via a screenshot of the spreadsheet created BOM</li>
+<li><strong>U3 (INA125P):</strong> Socketed, so one chip moves from the breadboard to the PCB; 1 spare.</li>
+<li><strong>U1 heatsink (507302B00000G):</strong> L7805 dissipates about 1.8 W (power budget).</li>
+<li><strong>J4 (OSTTE040161):</strong> PCB only (load cell wires go straight into the breadboard); 1 spare.</li>
+<li><strong>J1, J2 (61200821621):</strong> PCB only; jumper wires are used on the breadboard; 1 spare.</li>
+<li><strong>JP1, JP2 (SPC02SYAN):</strong> Price break at 10 makes 10 cheaper than 6.</li>
+<li><strong>D4 (1N5822):</strong> Cut tape.</li>
+<li><strong>C2 (FG14X7R1H334KNT06):</strong> L7805 input capacitor; Digi-Key marks it "not recommended for new design" but in stock; alternate KEMET C320C334K5R5TA.</li>
+<li><strong>C8 (FG28X7R1E105KRT06):</strong> X7R (not tantalum) so the 10.6 Hz filter is stable; 25 V exceeds the 16 V on the schematic.</li>
+<li><strong>R2 (MFR-25FBF52-100R):</strong> 1 % sets the gain of 604; 10 cost the same as 4.</li>
+<li><strong>R5 (MFR-25FBF52-15K):</strong> 10 cost the same as 4.</li>
+<li><strong>F1 holder (01000056Z):</strong> Two clips hold one fuse; PCB only; price break at 5.</li>
+<li><strong>Off-board via J4 (3135_0):</strong> Same load cell is used on the breadboard and the PCB; 1 spare. Bought out of pocket because a second vendor adds shipping that would push the order over the budget.</li>
+<li><strong>U3 socket:</strong> PCB socket and spares.</li>
+<li><strong>C3, C5, C6, C11:</strong> C5, C6, C11 are 16 V on the schematic; 50 V parts are fine.</li>
+<li><strong>F1:</strong> Normal (fast-acting) fuse, as the instructor advised.</li>
+<li><strong>J5, JP1, JP2, TP1–TP7:</strong> J5 10 + JP1/JP2 4 + TP1–TP7 7 = 21 pins per board.</li>
+<li><strong>U2 socket:</strong> Two 1 x 28 sockets for the Curiosity Nano; one contact is lost at each cut.</li>
+<li><strong>Kit parts:</strong> the resistors, LEDs and pushbutton come from my student kit. If any value is missing, I will take it from the Peralta drawers instead of ordering it.</li>
+<li><strong>Peralta stock:</strong> row numbers refer to the course stock planning sheet linked on the assignment page, not to bin locations. Quantities are requests; actual values and lead spacing will be checked before the PCB footprints are assigned.</li>
+<li><strong>Package size:</strong> every part is through-hole, so the course limit of nothing smaller than 0805 is met, and no part is a breakout module.</li>
 </ul>
-<h2 id="bill-of-materials-example-as-image">Bill of Materials Example (as Image)</h2>
-<p><img _2000_="&quot;2000&quot;" alt="" src="../BOM-Screenshot.png" style="style" width:="width:" />
-<strong>Figure 2:</strong> Example Bill of Materials as a screenshot.</p>
-<p>As you can see, the text can be difficult to read without opening the image.</p>
+<h2 id="purchase-requests">Purchase Requests</h2>
+<table>
+<thead>
+<tr>
+<th>Vendor</th>
+<th>Lines</th>
+<th>Total</th>
+<th>Request</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digi-Key</td>
+<td>11</td>
+<td><span>&#36;</span>39.42 + <span>&#36;</span>8.49 shipping + <span>&#36;</span>4.52 tariff = <span>&#36;</span>52.43</td>
+<td><a href="../files/Zice_Sun_PR_DigiKey.xlsx">XLSX</a> · <a href="../files/Zice_Sun_PR_DigiKey.pdf">PDF</a> · <a href="../files/Zice_Sun_DigiKey_Bulk_Upload.csv">Digi-Key bulk-upload list</a></td>
+</tr>
+<tr>
+<td>Peralta stock</td>
+<td>6</td>
+<td><span>&#36;</span>0</td>
+<td><a href="../files/Zice_Sun_PR_Peralta.xlsx">XLSX</a> · <a href="../files/Zice_Sun_PR_Peralta.pdf">PDF</a></td>
+</tr>
+</tbody>
+</table>
+<p>The load cells and the IDC sockets are bought out of pocket, so they have no purchase request. The Digi-Key request has more than 10 lines, so it includes a link to a shared Digi-Key cart made from the bulk-upload list.</p>
+<h2 id="resources">Resources</h2>
+<p>The full BOM spreadsheet is available <a href="../files/Zice_Sun_BOM.xlsx"><em>here</em></a>. Datasheets for the parts are saved in this repository (folder <code>docs/03-BOM/datasheets</code>) and linked in Table 2.</p>
+<h2 id="use-of-generative-ai">Use of Generative AI</h2>
+<p>I used Claude (Anthropic) to turn my KiCad schematic into this BOM: listing every reference designator, looking up Digi-Key part numbers, stock and prices, choosing order quantities under the course rule, checking which parts the Peralta stock list covers, filling in the purchase request forms and drafting this page. I checked the part choices against my schematic and component selection page.</p>
+<p>Query text:</p>
+<ol>
+<li>"Does the <span>&#36;</span>60 budget limit include tax?"</li>
+<li>"What parts does Peralta have that we can use, so they do not have to go on the purchase list?"</li>
+<li>"Should I buy female headers?" and "The female headers I mean are the ones soldered on the PCB."</li>
+<li>"So the IDC female connectors are these parts?" (with the team block diagram)</li>
+<li>"Make the parts my individual datasheet is still missing. Add a link to the team website on the home page."</li>
+<li>"This is the purchase request form." (with the class purchase request template) and "Read these assignment pages." (Hardware Orders and External Design Review)</li>
+<li>"I will buy the IDC sockets for both ribbon cables out of pocket. Which datasheets do I still need to download?"</li>
+<li>"Digi-Key shipping is about <span>&#36;</span>8. Is it included?" and "The form has tax and shipping lines, so they should be included." (I chose to buy the load cells out of pocket.)</li>
+</ol>
 
 
 
