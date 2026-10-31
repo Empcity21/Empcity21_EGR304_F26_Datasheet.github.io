@@ -1,8 +1,5 @@
 ---
 title: Welcome
-tags:
-- tag1
-- tag2
 ---
 <center>
 <font size= "6">Zice Sun Datasheet</font><br>
@@ -11,7 +8,7 @@ as part of<br>
 for<br>
 <font size= "5"> Team 103 </font><br>
 
-**Submission: Sep 2nd, 2026**
+**Last updated: October 30, 2026**
 </center>
 
 ## Introduction
@@ -25,10 +22,16 @@ Team 103 is designing **GripRx**, a prescription-based automatic-resistance grip
 
 ### My Contribution
 
-I design the **force sensing board**, the center board of the daisy chain. It measures grip force (load cell, INA125P instrumentation amplifier and active low-pass filter into the ADC), runs the training-session logic, and exchanges messages with the UI board and the motor board.
+I design the **force sensing board**, the center board of the daisy chain. It measures grip force (load cell, INA125P instrumentation amplifier and a passive RC low-pass filter into the ADC), runs the training-session logic, and exchanges messages with the UI board and the motor board.
 
 ## Datasheet Pages
 
 - [Block Diagram](01-Block-Diagram/Block-Diagram.md): individual block diagram of the force sensing board
 - [Component Selection](02-Component-Selection/Component-Selection.md): candidate parts, choices and rationale for each major component, and the microcontroller pin table
+- [Bill of Materials](03-BOM/BOM.md): every component on the board with order quantities, vendors, datasheets and purchase requests
+- [Schematic](04-Schematic/schematic.md): two-sheet KiCad schematic of the force sensing board, with PDF and project downloads
 - [Power Budget](05-Power-Budget/Power-Budget.md): worst-case current budget for the +5 V rail, regulator and 9 V wall adapter
+
+## Team Website
+
+- [Team 103 GripRx website](https://egr304-2026-f-103.github.io/): team organization, user needs, product requirements, design ideation, team block diagram and software proposal
