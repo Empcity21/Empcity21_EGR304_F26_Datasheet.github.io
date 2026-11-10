@@ -31,7 +31,6 @@ This schematic shows the GripRx force sensing board. Sheet 1 contains the 9 V in
 ## Resources
 
 - [Schematic (PDF)](Zice_Schematic.pdf)
-- [KiCad project (ZIP)](Zice_Schematic.zip)
 
 ## Use of Generative AI
 
